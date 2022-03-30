@@ -59,6 +59,12 @@ left: ${({showNavMenu})=> showNavMenu?'0':'-100vw'};
 
 
 `;
+/**
+ * Wrapper for the mobile menu
+ * @param {JSX} children
+ * @param {bool} showNavMenu show and hide mobile menu 
+ * @returns {JSX}
+ */
 
 function MobileNavigationMenuWrapper({children,showNavMenu}){
    

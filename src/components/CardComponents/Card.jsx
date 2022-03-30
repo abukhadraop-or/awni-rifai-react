@@ -23,6 +23,11 @@ const customCardWrapperStyles = `@media(min-width:820px){
     max-height: 400px;
 }`;
 
+/**
+ * A card that shows movie data 
+ * @param {object} movieData  movie data fetched from the api 
+ * @returns {JSX}  returns jsx of the cards
+ */
 function Card({ data }) {
   const [showMore, setShowMore] = useState(false);
   const strokeColor = data.vote_average > 7 ? "#21d07a" : "#d2d531";
@@ -35,7 +40,7 @@ function Card({ data }) {
     >
       <CardImage
         src={data.poster_path?`https://www.themoviedb.org/t/p/w220_and_h330_face/${data.poster_path}`:"https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-768x1129.jpg"}
-        alt="movie name"
+        alt={data.title}
         opacity={!showMore?'1':'0.2'}
       />
       <CardContent

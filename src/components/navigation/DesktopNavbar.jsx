@@ -13,7 +13,10 @@ height: 100%;
     display: none;
   }
 `;
-
+/**
+ * Desktop Navbar container
+ * @returns {JSX}
+ */
 function DesktopNavbar() {
   return (
     <StyledDesktopNavbar>

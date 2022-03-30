@@ -10,7 +10,11 @@ const StyledCardsGridWrapper = styled.div`
     grid-gap: 15px;
   }
 `;
-
+/**
+ * a wrapper for all the cards
+ * @param {JSX} children 
+ * @returns {JSX}
+ */
 function CardsGridWrapper({ children}) {
     
     

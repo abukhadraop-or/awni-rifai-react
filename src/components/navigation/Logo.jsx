@@ -10,7 +10,12 @@ aspect-ratio: auto 55/40;
 height: 40px;
 margin:${({margin})=>margin};
 `;
-
+/**
+ * 
+ * @param {string} src url of the logo image  
+ * @param {string} width  width of the logo adjusted based on the screen size
+ * @returns {JSX}
+ */
 function Logo({src,width,margin="0 auto"}) {
   return (
   <StyledLogo

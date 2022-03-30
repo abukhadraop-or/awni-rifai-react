@@ -9,6 +9,12 @@ const StyledSearchIcon = styled.i`
   font-size: 1.3rem;
 `;
 
+/**
+ * 
+ * @param {string} color set the color of the icon
+ * @param {string} marginRight  set the margin right of the icon
+ * @returns {JSX}
+ */
 function SearchIcon({ color ,marginRight}) {
   return (
     <StyledSearchIcon

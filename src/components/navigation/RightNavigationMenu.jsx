@@ -18,7 +18,10 @@ list-style-type: none;
 display: flex;
 align-items: center;
 `;
-
+/**
+ * 
+ * @returns {JSX}
+ */
 function RightNavigationMenu(){
     return(
         <StyledRightNavigationMenu>

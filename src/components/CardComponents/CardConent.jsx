@@ -26,7 +26,13 @@ p{
     }
 }
 `;
-
+/**
+ *  
+ * @param {string} title  movie title fetched from the data object
+ * @param {string} releaseDate movie release_date fetched from the data object
+ * @param {string} description movie description fetched from the data object
+ * @returns {jsx} 
+ */
 function CardContent({title,releaseDate,description}){
     return(
         <StyledCardContent>

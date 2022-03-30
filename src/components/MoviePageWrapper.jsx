@@ -21,7 +21,11 @@ padding: 9vh 2rem;
     
   }
 `;
-
+/**
+ *  a wrapper for the movie page
+ * @param {JSX} children 
+ * @returns {JSX}
+ */
 function MoviePageWrapper({ children }) {
   return <StyledMoviePageWrapper>{children}</StyledMoviePageWrapper>;
 }

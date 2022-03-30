@@ -5,7 +5,11 @@ import PropTypes from "prop-types";
 const StyledUserAndSearchWrapper = styled.div`
 
 `;
-
+/**
+ *  a wrapper for the user and the search
+ * @param {JSX} children 
+ * @returns 
+ */
 function UserAndSearchWrapper({ children }) {
   return <StyledUserAndSearchWrapper>{children}</StyledUserAndSearchWrapper>;
 }

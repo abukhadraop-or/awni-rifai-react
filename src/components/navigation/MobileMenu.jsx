@@ -34,7 +34,10 @@ font-weight: 600;
 }
 `;
 
-
+/**
+ * Mobile menu container
+ * @returns {JSX}
+ */
 function MobileMenu(){
     return(
         <StyledMobileMenu>

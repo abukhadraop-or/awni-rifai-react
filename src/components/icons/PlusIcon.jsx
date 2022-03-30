@@ -9,7 +9,12 @@ margin-right:${({marginRight})=>marginRight};
 font-weight: 600;
 font-size: 1rem;
 `;
-
+/**
+ * 
+ * @param {string} color set the color of the icon
+ * @param {string} marginRight  set the margin right of the icon
+ * @returns {JSX}
+ */
 function PlusIcon({color,marginRight}){
     return(
         <StyledPlusIcon marginRight={marginRight} className="fas fa-plus" color={color}/>

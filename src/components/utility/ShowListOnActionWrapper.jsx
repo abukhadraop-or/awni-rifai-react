@@ -20,7 +20,13 @@ const StyledShowListOnActionWrapper=styled.div`
 const StyledUnorderedList=styled.ul`
   list-style-type: none;
 `;
-
+/**
+ * a component that shows it's children based on an bool passed to it
+ * @param {JSX} children
+ * @param {bool}actionState
+ * @param {string} top  
+ * @returns {JSX}
+ */
 function ShowListOnActionWrapper({children,actionState,top}){
  return(
     <StyledShowListOnActionWrapper top={top} actionState={actionState}>

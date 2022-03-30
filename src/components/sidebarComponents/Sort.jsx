@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import ChevronIcon from "./icons/ChevronIcon";
-import CardWrapper from "./utility/CardWrapper";
-import DropDown from "./utility/DropDown";
+import ChevronIcon from "../icons/ChevronIcon";
+import CardWrapper from "../utility/CardWrapper";
+import DropDown from "../utility/DropDown";
 
 const sortOptions = [
   {
@@ -54,7 +54,11 @@ const StyledSort = styled.div`
     }
   }
 `;
-
+/**
+ * 
+ * @param {Function} setSortType a function that is called when the sort type is changed
+ * @returns {JSX}
+ */
 function Sort({ setSortType }) {
 
   const [exapndList, setExpandList] = useState(false);

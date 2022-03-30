@@ -21,7 +21,10 @@ const StyledMobileNavBar = styled.div`
     display: none;
   }
 `;
-
+/**
+ * mobile Navbar container
+ * @returns {JSX}
+ */
 function MobileNavbar() {
   const [showNavMenu,setShowNavMenu]=useState(false);
   return (

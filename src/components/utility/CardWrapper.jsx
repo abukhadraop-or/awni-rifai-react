@@ -21,7 +21,16 @@ position: relative;
 }
 ${({customStyles})=>customStyles}
 `;
-
+/**
+ * a card container 
+ * @param {JSX} children
+ * @param {string} borderLeft 
+ * @param {string} padding 
+ * @param {string} display 
+ * @param {object} customStyles custom styles to customize the card 
+ * @param {string} background 
+ * @returns {JSX}
+ */
 function CardWrapper({children,borderLeft,padding,display,customStyles,background}){
     return(
         <StyledCardWrapper background={background} customStyles={customStyles} display={display} padding={padding} borderLeft={borderLeft}>

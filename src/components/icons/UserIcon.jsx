@@ -5,7 +5,11 @@ import styled from "styled-components";
 const StyledUserIcon = styled.i`
   color: ${({color})=>color};
 `;
-
+/**
+ * 
+ * @param {string} color set the color of the icon
+ * @returns {JSX}
+ */
 function UserIcon({color}) {
   return (
     <StyledUserIcon color={color} className="fa fa-user" aria-hidden="true" />

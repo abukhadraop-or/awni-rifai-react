@@ -39,7 +39,11 @@ const StyledBurgerIcon = styled.div`
     }
   }
 `;
-
+/**
+ * 
+ * @param {Function} setShowNavMenu shows and hides nav menu based on clicking on the icon 
+ * @returns {JSX}
+ */
 function BurgerIcon({setShowNavMenu}) {
   return (
     <StyledBurgerIcon onClick={()=>setShowNavMenu((prev)=>!prev)} className="menu-btn">

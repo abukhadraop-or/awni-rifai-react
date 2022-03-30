@@ -21,7 +21,12 @@ const StyledChildrenItem = styled.li`
   
    
 `;
-
+/**
+ * 
+ * @param {string} menuTitle 
+ * @param {arrayOf{Objects}} menuItemChildren array of menu items (objects)
+ * @returns {JSX}
+ */
 function NavigationItem({ menuTitle, menuItemChildren }) {
   const [actionState, setActionState] = useState(false);
 

@@ -43,6 +43,12 @@ const StyledLeftNavigationMenu = styled.ul`
   margin-left: ${({marginLeft})=>marginLeft};
   list-style-type: none;
 `;
+/**
+ * 
+ * @param {string} marginRight sets margin-right for the left Menu 
+ * @param {string} marginLeft  sets margin-left for the left Menu 
+ * @returns 
+ */
 function LeftNavigationMenu({ marginRight, marginLeft }) {
   return (
     <StyledLeftNavigationMenu marginLeft={marginLeft} marginRight={marginRight}>

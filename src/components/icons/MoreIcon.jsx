@@ -30,6 +30,11 @@ span{
 
 `;
 
+/**
+ * 
+ * @param {Function} setShowMore a set state function that shows and hides more container 
+ * @returns {JSX}
+ */
 function MoreIcon({setShowMore}){
     return(
         <StyledMoreIcon onClick={()=>setShowMore(prev=>!prev)}>

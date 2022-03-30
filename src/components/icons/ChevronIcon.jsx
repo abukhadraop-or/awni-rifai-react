@@ -11,7 +11,13 @@ right:${({right})=>right};
 z-index: 0;
 
 `;
-
+/**
+ * 
+ * @param {string} direction direction of chevron icon (left right down up) 
+ * @param {string} left left position of the chevron
+ * @param {string} right right position of the chevron
+ * @returns {JSX}
+ */
 function ChevronIcon({direction,left,right}) {
   return (
     <StyledChevronIcon left={left} right={right} className={`fa solid fa-chevron-${direction}`} />

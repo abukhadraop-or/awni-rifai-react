@@ -17,9 +17,15 @@ opacity: ${({opacity})=>opacity};
 
 
 `;
-
+/**
+ * 
+ * @param {string} src image url
+ * @param {string} alt alternative text for images usually movie title
+ * @param {string} [opacity=1]  the opacity of the image 
+ * @returns {JSX}
+ */
 function CardImage({src,alt,opacity}){
-    
+     
 return(
     <StyledCardImage opacity={opacity} src={src} alt={alt}/>
 )

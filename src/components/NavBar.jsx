@@ -13,7 +13,10 @@ const StyledNavBar = styled.nav`
   padding: 0.6rem 0;
   font-size: 0.8rem;
 `;
-
+/**
+ * 
+ * @returns {JSx}
+ */
 function NavBar() {
   return (
     <StyledNavBar>

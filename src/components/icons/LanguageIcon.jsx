@@ -18,7 +18,12 @@ const StyledLanguageIcon = styled.span`
 
   margin-right: ${({ marginRight }) => marginRight};
 `;
-
+/**
+ * 
+ * @param {string} lan the language displayed to the user (EN AR GR) 
+ * @param {string} marginRight margin right of the container of the language
+ * @returns 
+ */
 function LanguageIcon({ lan,marginRight }) {
   return (
     <StyledLanguageIcon 

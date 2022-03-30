@@ -12,7 +12,12 @@ const StyledDropDown = styled.select`
  border-radius: 0.2rem;
  letter-spacing: 0.6px;
 `;
-
+/**
+ * 
+ * @param {Array} options provide a list of options for the DropDown 
+ * @param {Function} setSortType a function that is called on DropDown change 
+ * @returns {JSX}
+ */
 function DropDown({ options,setSortType}) {
   return (
     <StyledDropDown onChange={e=>setSortType(e.target.value)}>
