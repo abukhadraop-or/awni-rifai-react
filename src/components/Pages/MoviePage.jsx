@@ -1,25 +1,26 @@
 import { React, useEffect, useState } from "react";
-import MoviePageWrapper from "../MoviePageWrapper";
-import CardsGridWrapper from "../CardsGridWrapper";
-import Card from "../CardComponents/Card";
-import Sort from "../sidebarComponents/Sort";
+import MoviePageWrapper from "components/MoviePageWrapper";
+import CardsGridWrapper from "components/CardsGridWrapper";
+import Card from "components/CardComponents/Card";
+import Sort from "components/sidebarComponents/Sort";
 
 /**
- * The movie page 
- * @returns {JSX} 
+ * The movie page
+ * @returns {JSX}
  */
 function MoviePage() {
-  
   const [movies, setMoviesData] = useState([]);
   const [sortType, setSortType] = useState("");
-  const [sort,setSort]=useState('popularity.asc')
+  const [sort, setSort] = useState("popularity.asc");
 
   /**
    * make get request
    * @return {Promise<Object>} Promise fulfilled with response data.
    */
   const fetchData = () => {
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=a6ce94f05ccb22f0236d41a4d037e960&language=en-US&sort_by=${sort}&include_adult=false&include_video=false&page=1`)
+    fetch(
+      `https://api.themoviedb.org/3/discover/movie?api_key=a6ce94f05ccb22f0236d41a4d037e960&language=en-US&sort_by=${sort}&include_adult=false&include_video=false&page=1`
+    )
       .then((response) => response.json())
       .then((data) => {
         setMoviesData(data.results);
@@ -28,14 +29,13 @@ function MoviePage() {
         console.log(error);
       });
   };
-  
+
   useEffect(() => {
     fetchData();
   }, [sortType]);
 
   useEffect(() => {
-    setSort(sortType)
-   
+    setSort(sortType);
   }, [sortType]);
 
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "./Logo";
-import LeftNavigationMenu  from "./LeftNavigationMenu";
-import RightNavigationMenu from "./RightNavigationMenu";
+import Logo from "components/navigation/Logo";
+import LeftNavigationMenu from "components/navigation/LeftNavigationMenu";
+import RightNavigationMenu from "components/navigation/RightNavigationMenu";
 
 const StyledDesktopNavbar = styled.div`
-height: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   padding: 0 200px;
@@ -25,12 +25,9 @@ function DesktopNavbar() {
         width="125px"
         margin="0"
       />
-      <LeftNavigationMenu marginLeft="16px" marginRight="auto"/>
-      <RightNavigationMenu/>
-      
-
-
+      <LeftNavigationMenu marginLeft="16px" marginRight="auto" />
+      <RightNavigationMenu />
     </StyledDesktopNavbar>
-  );    
+  );
 }
 export default DesktopNavbar;

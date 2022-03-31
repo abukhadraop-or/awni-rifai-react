@@ -1,13 +1,13 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import GlobalStyle from "./globalStyles";
-import MoviePage from "./components/Pages/MoviePage";
+import Navbar from 'components/NavBar'
+import GlobalStyle from "globalStyles";
+import MoviePage from "components/Pages/MoviePage";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <NavBar />
+      <Navbar/>
       <MoviePage/>
     </>
   );

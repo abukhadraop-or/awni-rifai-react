@@ -7,7 +7,8 @@ const StyledCardsGridWrapper = styled.div`
     margin-left: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-gap: 15px;
+    grid-template-rows: auto;
+    grid-gap: 3rem;
   }
 `;
 /**

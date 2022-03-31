@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from 'prop-types';
 
 const StyledCardImage=styled.img`
-height: 100%;
+
 width: 30%;
 border-top-left-radius: 0.4rem;
 border-bottom-left-radius: 0.4rem;

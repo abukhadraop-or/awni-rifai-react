@@ -18,6 +18,7 @@ position: relative;
 //add custom styles
 @media (min-width:820px){
     display: block;
+    height: auto;
 }
 ${({customStyles})=>customStyles}
 `;

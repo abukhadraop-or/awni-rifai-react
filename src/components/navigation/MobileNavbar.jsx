@@ -1,13 +1,12 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import BurgerIcon from "./BurgerIcon";
-import SearchIcon from "../icons/SearchIcon";
-import UserIcon from "../icons/UserIcon";
-import Logo from "./Logo";
-import UserAndSearchWrapper from "./UserAndSearchWrapper";
-import MobileNavigationMenuWrapper from "./MobileNavigationMenuWrapper";
-import MobileMenu from "./MobileMenu";
-
+import BurgerIcon from "components/navigation/BurgerIcon";
+import SearchIcon from "components/icons/SearchIcon";
+import UserIcon from "components/icons/UserIcon";
+import Logo from "components/navigation/Logo";
+import UserAndSearchWrapper from "components/navigation/UserAndSearchWrapper";
+import MobileNavigationMenuWrapper from "components/navigation/MobileNavigationMenuWrapper";
+import MobileMenu from "components/navigation/MobileMenu";
 
 const StyledMobileNavBar = styled.div`
   height: 100%;
@@ -16,7 +15,7 @@ const StyledMobileNavBar = styled.div`
   padding: 0 20px;
   position: relative;
   z-index: 200;
-  
+
   @media (min-width: 1181px) {
     display: none;
   }
@@ -26,7 +25,7 @@ const StyledMobileNavBar = styled.div`
  * @returns {JSX}
  */
 function MobileNavbar() {
-  const [showNavMenu,setShowNavMenu]=useState(false);
+  const [showNavMenu, setShowNavMenu] = useState(false);
   return (
     <StyledMobileNavBar>
       <BurgerIcon setShowNavMenu={setShowNavMenu} />
@@ -40,7 +39,7 @@ function MobileNavbar() {
         <SearchIcon color="white" />
       </UserAndSearchWrapper>
       <MobileNavigationMenuWrapper showNavMenu={showNavMenu}>
-        <MobileMenu/>
+        <MobileMenu />
       </MobileNavigationMenuWrapper>
     </StyledMobileNavBar>
   );

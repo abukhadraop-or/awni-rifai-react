@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import ShowListOnActionWrapper from "../utility/ShowListOnActionWrapper";
+import ShowListOnActionWrapper from "components/utility/ShowListOnActionWrapper";
 
 const StyledNavigationItem = styled.li`
   color: white;
@@ -10,20 +10,18 @@ const StyledNavigationItem = styled.li`
   text-transform: capitalize;
   font-family: "Source Sans Pro", Arial, sans-serif;
   position: relative;
-  :hover{
-      cursor: pointer;  
-    }
+  :hover {
+    cursor: pointer;
+  }
 `;
 const StyledChildrenItem = styled.li`
   color: black;
   margin-top: 6px;
   font-weight: 400;
-  
-   
 `;
 /**
- * 
- * @param {string} menuTitle 
+ *
+ * @param {string} menuTitle
  * @param {arrayOf{Objects}} menuItemChildren array of menu items (objects)
  * @returns {JSX}
  */
@@ -35,14 +33,12 @@ function NavigationItem({ menuTitle, menuItemChildren }) {
       onMouseEnter={() => setActionState(true)}
       onMouseLeave={() => setActionState(false)}
     >
-        <ShowListOnActionWrapper actionState={actionState}>
-            
+      <ShowListOnActionWrapper actionState={actionState}>
         {menuItemChildren.map((item) => (
           <StyledChildrenItem key={Math.random()}>
-              {item.childrenTitle}
-              </StyledChildrenItem>
-        ))} 
-        
+            {item.childrenTitle}
+          </StyledChildrenItem>
+        ))}
       </ShowListOnActionWrapper>
       {menuTitle}
     </StyledNavigationItem>
