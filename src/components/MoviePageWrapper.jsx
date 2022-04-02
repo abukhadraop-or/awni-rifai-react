@@ -13,7 +13,7 @@ padding: 9vh 2rem;
         font-size: 1.4rem;
     }
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: minmax(200px,1fr) 4fr;
     grid-template-rows: auto;
     grid-template-areas:'h1 h1';
 

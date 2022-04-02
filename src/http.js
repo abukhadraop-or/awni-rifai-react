@@ -4,7 +4,7 @@
  * @param {string} url Request URL.
  * @param {object} [headers=null] Object contains request headers.
  *
- * @returns {Promise<object>} Promise fulfilled with response data.
+ * @return {Promise<object>} Promise fulfilled with response data.
  */
 
 const get = async (url, headers = {}) => {

@@ -1,33 +1,26 @@
 import { React, useEffect, useState } from 'react';
 import MoviePageWrapper from 'components/MoviePageWrapper';
 import CardsGridWrapper from 'components/CardsGridWrapper';
-import Card from 'components/CardComponents/Card';
-import Sort from 'components/sidebarComponents/Sort';
+import Sort from 'components/sidebarComponents/sort/Sort';
 import getAllMovies from 'movie-api';
+import MovieCard from 'components/movieCard/MovieCard';
 
 /**
- * The movie page
- * @returns {JSX}
+ * Renders The whole Movie Page.
+ * @return {JSX.Element}
  */
 function MoviePage() {
   const [movies, setMoviesData] = useState([]);
   const [sortType, setSortType] = useState('');
-  
-
-  /**
-   * make get request
-   * @return {Promise<Object>} Promise fulfilled with response data.
-   */
-
-  /**
-   * set the movies to the array fetched from getAllMovies
-   */
-  const setMovies = async () => {
-    const fetchedMovies = await getAllMovies(1, sortType);
-    setMoviesData(fetchedMovies);
-  };
 
   useEffect(() => {
+    /**
+     * set the movies to the array fetched from getAllMovies.
+     */
+    const setMovies = async () => {
+      const fetchedMovies = await getAllMovies(1, sortType);
+      setMoviesData(fetchedMovies);
+    };
     setMovies();
   }, [sortType]);
 
@@ -41,7 +34,7 @@ function MoviePage() {
       />
       <CardsGridWrapper data={movies}>
         {movies?.map((movie) => (
-          <Card key={movie.id} data={movie} />
+          <MovieCard key={movie.id} data={movie} />
         ))}
       </CardsGridWrapper>
     </MoviePageWrapper>

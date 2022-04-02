@@ -6,8 +6,8 @@ const StyledChevronIcon = styled.i`
 position: absolute;
 top: 50%;
 transform: translateY(-50%);
-left:${({left})=>left};
-right:${({right})=>right};
+
+right:0;
 z-index: 0;
 
 `;
