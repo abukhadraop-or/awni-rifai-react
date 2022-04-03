@@ -1,6 +1,6 @@
 const viewPorts = {
+  desktop:'1181px',
   mobile: '820px',
-  desktop:'1181px'
 };
 
 export default viewPorts;
