@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import viewPorts from "global-constants/viewPorts";
 
 const StyledCardsGridWrapper = styled.div`
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     margin-left: 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

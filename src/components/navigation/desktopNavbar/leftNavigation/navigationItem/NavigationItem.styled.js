@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const StyledNavigationItem = styled.li`
   color: white;
-  font-family: "Source Sans Pro", Arial, sans-serif;
   font-weight: 600;
   margin-right: 2.5rem;
+  font-size: 1rem;
   position: relative;
   text-transform: capitalize;
   :hover {

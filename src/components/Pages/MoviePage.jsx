@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import MoviePageWrapper from 'components/wrappers/moviePageWrapper/MoviePageWrapper';
 import CardsGridWrapper from 'components/wrappers/cardsWrapper/CardsGridWrapper';
 import Sort from 'components/sidebarComponents/sort/Sort';
-import getAllMovies from 'movie-api';
+import getAllMovies from 'api-calls/movie-api';
 import MovieCard from 'components/movieCard/MovieCard';
 import MainHeader from 'components/Pages/moviePage.Styled';
 

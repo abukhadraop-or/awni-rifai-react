@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import viewPorts from 'global-constants/viewPorts';
 
 export const StyledCardContent = styled.div`
   margin-bottom: 2rem;
@@ -16,7 +17,7 @@ export const Paragraph = styled.p`
   font-size: 0.9rem;
   margin-top: 0.8rem;
   word-break: normal;
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     display: none;
   }
 `;

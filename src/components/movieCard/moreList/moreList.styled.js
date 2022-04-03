@@ -1,0 +1,38 @@
+import styled from 'styled-components';
+
+export const StyledMoreList = styled.div`
+  position: absolute;
+  top: 2.5rem;
+  left: 1rem;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  z-index: 40;
+  font-size: 1rem;
+  padding: 0;
+  width: 150%;
+`;
+export const UpperSection = styled.div`
+  padding: 0.8rem;
+  border-bottom: solid 1px #3333;
+`;
+export const LowerSection = styled.div`
+ padding: 0.8rem;
+`;
+export const H6 = styled.h6`
+font-size: .8rem;
+font-weight:600;
+margin-bottom: .7rem;
+`;
+export const A = styled.a`
+font-weight: 600;
+font-size: 0.8rem;
+color: rgba(0,0,0,0.6);
+
+`;
+export const Chevron = styled.i`
+color: black;
+font-weight:600;
+margin-top: .4rem;
+font-size: .7rem;
+`;

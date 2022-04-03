@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+import viewPorts from 'global-constants/viewPorts';
 
 export const MovieCardContainer = styled.div`
-  background-color: white;
   border-left: .1rem;
   border-radius: 0.4rem;
   border: 1px solid #00000033;
@@ -12,7 +12,7 @@ export const MovieCardContainer = styled.div`
   margin-top: 1rem;
   position: relative;
   width: 100%;
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     display: block;
     height: auto;
     max-height: fit-content;
@@ -23,7 +23,7 @@ export const ImageContainer = styled.div`
   position: relative;
   min-width: 7rem;
   width: 20%;
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     width: 100%;
     min-width: auto;
   }
@@ -32,7 +32,7 @@ export const ImageContainer = styled.div`
 export const ProgressBarContainer = styled.div`
   display: none;
 
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     position: absolute;
     bottom: -10px;
     display: initial;
@@ -44,4 +44,14 @@ export const ProgressBarContainer = styled.div`
       stroke: ${({ green }) => (green === 'true' ? '#21d07a' : '#d2d531')};
     }
   }
+`;
+export const Overlay=styled.div`
+ background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 10;
 `;

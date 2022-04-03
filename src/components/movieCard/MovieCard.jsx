@@ -1,24 +1,47 @@
-import React from 'react';
+import { React, useRef, useState, useEffect } from 'react';
 import CardImage from 'components/movieCard/cardImage/CardImage';
 import PropTypes from 'prop-types';
 import CardContent from 'components/movieCard/cardContent/CardContent';
 import {
   ImageContainer,
   MovieCardContainer,
+  Overlay,
 } from 'components/movieCard/movie-card.styled';
 import ProgressBar from 'components/movieCard/progressBar/ProgressBar';
 import { MoreIcon } from 'components/navigation/shared/shared.styled';
+import MoreList from 'components/movieCard/moreList/MoreList';
+import { backupImagePath } from 'global-constants/envConstants';
 
-const BACKUP_IMAGE_PATH = process.env.React_APP_BACKUP_IMAGE_PATH;
+const BACKUP_IMAGE_PATH = backupImagePath;
+
 /**
  * Show Movie Card
  * @param {object} props
  * @param {object} props.data Movie details fetched from API.
  * @return {JSX.Element}
  */
-function MovieCard({ data }) {  
+function MovieCard({ data }) {
+  const cardRef = useRef();
+  const [showMore, setShowMore] = useState(false);
+  /**
+   * Function that handles the click outside the component
+   * @param {object} e The event that triggered when the click initiated.
+   */
+  const clickOutHandler = (e) => {
+    if (!cardRef.current.contains(e.target)) setShowMore(false);
+  };
+
+  useEffect(() => {
+    if (!showMore) return {};
+    document.addEventListener('mousedown', clickOutHandler);
+    return () => {
+      document.removeEventListener('mousedown', clickOutHandler);
+    }
+  }, [showMore]);
+
   return (
-    <MovieCardContainer>
+    <MovieCardContainer ref={cardRef}>
+      {showMore ? <Overlay onClick={() => setShowMore(false)} /> : ''}
       <ImageContainer>
         <CardImage
           src={
@@ -35,12 +58,16 @@ function MovieCard({ data }) {
         releaseDate={data.release_date}
         description={data.overview?.slice(0, 60)}
       />
-      <MoreIcon className="fas fa-ellipsis-h"/>
+      <MoreIcon
+        onClick={() => setShowMore((prev) => !prev)}
+        className="fas fa-ellipsis-h"
+      />
+      {showMore ? <MoreList /> : ''}
     </MovieCardContainer>
   );
 }
 MovieCard.propTypes = {
-    data: PropTypes.shape({
+  data: PropTypes.shape({
     id: PropTypes.number,
     overview: PropTypes.string,
     poster_path: PropTypes.string,

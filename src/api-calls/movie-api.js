@@ -1,7 +1,8 @@
 import get from 'helperFunctions/http';
+import { apiKey } from 'global-constants/envConstants';
 
 const movieBaseUrl = 'https://api.themoviedb.org/3/discover/movie';
-const API_KEY = process.env.React_APP_API_KEY;
+const API_KEY = apiKey;
 
 /**
  *  Fetch all movies from the base link provided.

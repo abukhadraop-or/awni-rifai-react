@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import  viewPorts  from 'global-constants/viewPorts';
 
 export const SortHead = styled.div`
   margin-bottom: ${({ exapndList }) => (exapndList ? '1rem' : '0rem')};
@@ -33,7 +34,7 @@ export const CardWrapper = styled.div`
   padding: 1rem 1.5rem;
   position: relative;
   width: 100%;
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     display: block;
     height: fit-content;
   }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import viewPorts from 'global-constants/viewPorts';
 
 export const StyledMobileNavBar = styled.div`
   height: 100%;
@@ -8,7 +9,7 @@ export const StyledMobileNavBar = styled.div`
   position: relative;
   z-index: 200;
 
-  @media (min-width: 1181px) {
+  @media (min-width: ${viewPorts.desktop}) {
     display: none;
   }
 `;
