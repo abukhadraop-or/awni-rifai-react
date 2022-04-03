@@ -4,6 +4,7 @@ import CardsGridWrapper from 'components/wrappers/cardsWrapper/CardsGridWrapper'
 import Sort from 'components/sidebarComponents/sort/Sort';
 import getAllMovies from 'movie-api';
 import MovieCard from 'components/movieCard/MovieCard';
+import MainHeader from 'components/Pages/moviePage.Styled';
 
 /**
  * Renders The whole Movie Page.
@@ -26,7 +27,7 @@ function MoviePage() {
 
   return (
     <MoviePageWrapper>
-      <h2 className="main-header">Popular Movies</h2>
+      <MainHeader>Popular Movies</MainHeader>
       <Sort
         handleFilter={setMoviesData}
         setSortType={setSortType}

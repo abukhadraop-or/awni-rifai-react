@@ -6,7 +6,7 @@ import {
   BurgerIcon,
   BurgerInnerDiv,
   UserAndSearchWrapper,
-  MobileNavigationMenuWrapper
+  MobileNavigationMenuWrapper,
 } from 'components/navigation/mobileNavbar/mobileNavbar.styled';
 import { Logo, SearchIcon } from 'components/navigation/shared/shared.styled';
 

@@ -27,7 +27,7 @@ export const BurgerIcon = styled.div`
   border: 3px solid white;
 `;
 export const BurgerInnerDiv = styled.div`
-  width: 20px;
+  width: 1.5rem;
   height: 4px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
@@ -35,9 +35,10 @@ export const BurgerInnerDiv = styled.div`
   ::after {
     content: '';
     position: absolute;
-    width: 20px;
+    width: 1.5rem;
     height: 4px;
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
+    opacity: 0.9;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
   }

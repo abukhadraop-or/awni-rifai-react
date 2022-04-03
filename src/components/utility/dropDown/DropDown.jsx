@@ -3,7 +3,7 @@ import StyledDropDown from 'components/utility/dropDown/dropDown.styled';
 import PropTypes from 'prop-types';
 
 /**
- * Shows Drop Down Menu
+ * Shows Drop Down Menu.
  * @param  {object} props
  * @param {Array} props.options Provide a list of options for the DropDown.
  * @param {Function} props.setSortType A function that is called on DropDown change.

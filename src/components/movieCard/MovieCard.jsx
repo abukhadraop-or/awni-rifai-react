@@ -7,6 +7,7 @@ import {
   MovieCardContainer,
 } from 'components/movieCard/movie-card.styled';
 import ProgressBar from 'components/movieCard/progressBar/ProgressBar';
+import { MoreIcon } from 'components/navigation/shared/shared.styled';
 
 const BACKUP_IMAGE_PATH = process.env.React_APP_BACKUP_IMAGE_PATH;
 /**
@@ -34,6 +35,7 @@ function MovieCard({ data }) {
         releaseDate={data.release_date}
         description={data.overview?.slice(0, 60)}
       />
+      <MoreIcon className="fas fa-ellipsis-h"/>
     </MovieCardContainer>
   );
 }

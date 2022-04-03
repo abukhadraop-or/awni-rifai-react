@@ -12,3 +12,16 @@ export const SearchIcon = styled.i`
   margin-left: 1rem;
   margin-right: 1rem;
 `;
+export const MoreIconContainer=styled.div`
+
+`;
+export const MoreIcon=styled.i`
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: .8rem;
+background-color: #fff;
+padding:.2rem;
+border-radius: 50%;
+opacity: 0.4;
+`;
