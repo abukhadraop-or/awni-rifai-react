@@ -1,4 +1,4 @@
-import get from 'http';
+import get from 'helperFunctions/http';
 
 const movieBaseUrl = 'https://api.themoviedb.org/3/discover/movie';
 const API_KEY = process.env.React_APP_API_KEY;

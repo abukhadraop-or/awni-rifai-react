@@ -4,7 +4,7 @@ import styled from "styled-components";
   align-items: center;
   display: flex;
   height: 100%;
-  padding: 0 20rem;
+  padding: 0 16rem;
   @media (max-width: 1181px) {
     display: none;
   }

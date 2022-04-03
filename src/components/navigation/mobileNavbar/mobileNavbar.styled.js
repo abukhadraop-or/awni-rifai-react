@@ -55,10 +55,10 @@ export const MobileNavigationMenuWrapper = styled.div`
   background-color: #203953;
   position: absolute;
   color: black;
-  height: 93vh;
+  height: 95vh;
   left: 0;
   padding: 20px;
-  top: 7vh;
+  top: 5vh;
   transition: display 4s;
   width: 90%;
   z-index: 100;

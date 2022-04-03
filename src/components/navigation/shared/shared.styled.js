@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Logo = styled.img`
   aspect-ratio: auto 55/40;
-  height: 4rem;
+  height: 2rem;
   margin: ${({ margin }) => margin==="Desktop"?"1rem":"0 auto"};
-  width: ${({ width }) => width==="Desktop"?'11.2rem':'5.5rem'};
+  width: ${({ width }) => width==="Desktop"?'8rem':'5.5rem'};
 `;
 export const SearchIcon = styled.i`
   color: lightblue;
