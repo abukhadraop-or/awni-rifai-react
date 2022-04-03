@@ -1,20 +1,13 @@
 import React from "react";
-import styled from "styled-components";
 import PropTypes from "prop-types";
+import StyledCardsGridWrapper from 'components/wrappers/cardsWrapper/cardsWrapper.styled';
 
-const StyledCardsGridWrapper = styled.div`
-  @media (min-width: 820px) {
-    margin-left: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 3rem;
-  }
-`;
+
 /**
- * a wrapper for all the cards
- * @param {JSX} children 
- * @returns {JSX}
+ * A wrapper for all the cards.
+ * @param {object} props
+ * @param {JSX.Element} props.children 
+ * @return {JSX.Element}
  */
 function CardsGridWrapper({ children}) {
     

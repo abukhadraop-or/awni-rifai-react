@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react';
-import MoviePageWrapper from 'components/MoviePageWrapper';
-import CardsGridWrapper from 'components/CardsGridWrapper';
+import MoviePageWrapper from 'components/wrappers/moviePageWrapper/MoviePageWrapper';
+import CardsGridWrapper from 'components/wrappers/cardsWrapper/CardsGridWrapper';
 import Sort from 'components/sidebarComponents/sort/Sort';
 import getAllMovies from 'movie-api';
 import MovieCard from 'components/movieCard/MovieCard';

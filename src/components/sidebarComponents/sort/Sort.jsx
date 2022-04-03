@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import DropDown from 'components/utility/DropDown';
+import DropDown from 'components/utility/dropDown/DropDown';
 import {
   H2,
   H3,

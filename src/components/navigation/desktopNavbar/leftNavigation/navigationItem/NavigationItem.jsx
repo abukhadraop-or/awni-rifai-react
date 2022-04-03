@@ -1,29 +1,17 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import ShowListOnActionWrapper from "components/utility/ShowListOnActionWrapper";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import ShowListOnActionWrapper from 'components/utility/showListOnActionWrapper/ShowListOnActionWrapper';
+import {
+  StyledNavigationItem,
+  StyledChildrenItem,
+} from 'components/navigation/desktopNavbar/leftNavigation/navigationItem/NavigationItem.styled';
 
-const StyledNavigationItem = styled.li`
-  color: white;
-  margin-right: 25px;
-  font-weight: 600;
-  text-transform: capitalize;
-  font-family: "Source Sans Pro", Arial, sans-serif;
-  position: relative;
-  :hover {
-    cursor: pointer;
-  }
-`;
-const StyledChildrenItem = styled.li`
-  color: black;
-  margin-top: 6px;
-  font-weight: 400;
-`;
 /**
- *
- * @param {string} menuTitle
- * @param {arrayOf{Objects}} menuItemChildren array of menu items (objects)
- * @returns {JSX}
+ * Shows Navigation Item
+ * @param {props}
+ * @param {string} props.menuTitle
+ * @param {arrayOf{Objects}} props.menuItemChildren Array of menu items (objects).
+ * @return {JSX.Element}
  */
 function NavigationItem({ menuTitle, menuItemChildren }) {
   const [actionState, setActionState] = useState(false);
@@ -46,16 +34,16 @@ function NavigationItem({ menuTitle, menuItemChildren }) {
 }
 
 NavigationItem.propTypes = {
-  menuTitle: PropTypes.string,
   menuItemChildren: PropTypes.arrayOf(
     PropTypes.shape({
       childrenTitle: PropTypes.string,
       link: PropTypes.string,
     })
-  ),
+    ),
+    menuTitle: PropTypes.string,
 };
 NavigationItem.defaultProps = {
-  menuTitle: "",
   menuItemChildren: [],
+  menuTitle: '',
 };
 export default NavigationItem;

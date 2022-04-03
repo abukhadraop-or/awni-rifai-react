@@ -38,15 +38,13 @@ function MovieCard({ data }) {
   );
 }
 MovieCard.propTypes = {
-  data: PropTypes.shape({
-    adult: PropTypes.bool,
-    backdrop_path: PropTypes.string,
+    data: PropTypes.shape({
     id: PropTypes.number,
-    title: PropTypes.string,
-    release_date: PropTypes.string,
-    poster_path: PropTypes.string,
-    vote_average: PropTypes.number,
     overview: PropTypes.string,
+    poster_path: PropTypes.string,
+    release_date: PropTypes.string,
+    title: PropTypes.string,
+    vote_average: PropTypes.number,
   }),
 };
 MovieCard.defaultProps = {

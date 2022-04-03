@@ -1,6 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const StyledMoviePageWrapper = styled.main`
 padding: 9vh 2rem;
@@ -21,18 +19,4 @@ padding: 9vh 2rem;
     
   }
 `;
-/**
- *  a wrapper for the movie page
- * @param {JSX} children 
- * @returns {JSX}
- */
-function MoviePageWrapper({ children }) {
-  return <StyledMoviePageWrapper>{children}</StyledMoviePageWrapper>;
-}
-MoviePageWrapper.defaultProps = {
-  children: null,
-};
-MoviePageWrapper.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node),
-};
-export default MoviePageWrapper;
+export default StyledMoviePageWrapper;
