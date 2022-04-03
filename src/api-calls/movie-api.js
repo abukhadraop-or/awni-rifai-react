@@ -1,5 +1,5 @@
-import get from 'helperFunctions/http';
-import { apiKey } from 'global-constants/envConstants';
+import get from 'helper-functions/http';
+import { apiKey } from 'global-variables/envConstants';
 
 const movieBaseUrl = 'https://api.themoviedb.org/3/discover/movie';
 const API_KEY = apiKey;
@@ -21,7 +21,9 @@ const getAllMovies = async (
   includeVideo = 'false'
 ) => {
   const data = await get(
-    `${movieBaseUrl}?api_key=${API_KEY}${sort!==""?`&sort_by=${sort}`:""}&language=${language}&include_adult=${includeAdult}&include_video=${includeVideo}&page=${page}`
+    `${movieBaseUrl}?api_key=${API_KEY}${
+      sort !== '' ? `&sort_by=${sort}` : ''
+    }&language=${language}&include_adult=${includeAdult}&include_video=${includeVideo}&page=${page}`
   );
 
   return data.results;

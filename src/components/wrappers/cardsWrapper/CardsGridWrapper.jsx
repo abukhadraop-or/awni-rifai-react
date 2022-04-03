@@ -1,17 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import StyledCardsGridWrapper from 'components/wrappers/cardsWrapper/cardsWrapper.styled';
-
 
 /**
  * A wrapper for all the cards.
  * @param {object} props
- * @param {JSX.Element} props.children 
+ * @param {JSX.Element} props.children
  * @return {JSX.Element}
  */
-function CardsGridWrapper({ children}) {
-    
-    
+function CardsGridWrapper({ children }) {
   return <StyledCardsGridWrapper>{children}</StyledCardsGridWrapper>;
 }
 CardsGridWrapper.defaultProps = {

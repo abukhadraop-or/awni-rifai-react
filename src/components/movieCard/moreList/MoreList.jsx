@@ -18,9 +18,10 @@ function MoreList() {
         </A>
       </UpperSection>
       <LowerSection>
-        <H6>Not a memeber?</H6>
+        <H6>Not a member?</H6>
         <A>
-          Signup and join the community <Chevron className="fa solid fa-chevron-right" />
+          Signup and join the community{' '}
+          <Chevron className="fa solid fa-chevron-right" />
         </A>
       </LowerSection>
     </StyledMoreList>

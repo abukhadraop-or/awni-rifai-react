@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import viewPorts from "global-constants/viewPorts";
+import styled from 'styled-components';
+import viewPorts from 'global-variables/viewPorts';
 
 const StyledCardsGridWrapper = styled.div`
   @media (min-width: ${viewPorts.mobile}) {

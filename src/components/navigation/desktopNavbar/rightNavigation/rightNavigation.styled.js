@@ -22,17 +22,16 @@ export const PlusIcon = styled.i`
 `;
 export const LanguageIcon = styled.span`
   align-items: center;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   border: 1px solid white;
-  box-shadow: .1rem .1rem .1rem #000000;
+  box-shadow: 0.1rem 0.1rem 0.1rem #000000;
   display: flex;
   font-size: 0.9em;
   font-weight: 600;
   height: 2rem;
   justify-content: center;
   margin-right: 1.2rem;
-  padding: .1rem .5rem;
+  padding: 0.1rem 0.5rem;
   text-transform: uppercase;
   width: 2.4rem;
 `;
-

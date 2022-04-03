@@ -39,8 +39,8 @@ NavigationItem.propTypes = {
       childrenTitle: PropTypes.string,
       link: PropTypes.string,
     })
-    ),
-    menuTitle: PropTypes.string,
+  ),
+  menuTitle: PropTypes.string,
 };
 NavigationItem.defaultProps = {
   menuItemChildren: [],

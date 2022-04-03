@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import viewPorts from 'global-constants/viewPorts';
+import viewPorts from 'global-variables/viewPorts';
 
 const StyledDesktopNavbar = styled.div`
   display: none;

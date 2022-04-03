@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import viewPorts from 'global-constants/viewPorts';
+import viewPorts from 'global-variables/viewPorts';
 
 export const MovieCardContainer = styled.div`
-  border-left: .1rem;
+  border-left: 0.1rem;
   border-radius: 0.4rem;
   border: 1px solid #00000033;
   box-shadow: 0 0.2rem 0.8rem #0000001a;
@@ -45,8 +45,8 @@ export const ProgressBarContainer = styled.div`
     }
   }
 `;
-export const Overlay=styled.div`
- background-color: rgba(0,0,0,0.5);
+export const Overlay = styled.div`
+  background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);
   position: absolute;
   top: 0;

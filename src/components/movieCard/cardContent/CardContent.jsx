@@ -16,11 +16,12 @@ import {
  * @return {JSX.Element}
  */
 function CardContent({ title, releaseDate, description }) {
-    
   return (
     <StyledCardContent>
       <SecondaryHeader>{title}</SecondaryHeader>
-      <ReleaseDate>{releaseDate===""?releaseDate:"There is no release date"}</ReleaseDate>
+      <ReleaseDate>
+        {releaseDate !== '' ? releaseDate : 'There is no release date'}
+      </ReleaseDate>
       <Paragraph>{description}</Paragraph>
     </StyledCardContent>
   );

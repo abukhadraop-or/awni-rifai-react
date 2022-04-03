@@ -17,14 +17,14 @@ export const ProgressBarContainer = styled.div`
   }
 `;
 export const progressBarStyles = {
-    background: {
-      fill: 'black',
-    },
-    text: {
-      fill: 'white',
-      fontSize: '35px',
-      fontWeight: 'bold',
-    },
+  background: {
+    fill: 'black',
+  },
+  text: {
+    fill: 'white',
+    fontSize: '35px',
+    fontWeight: 'bold',
+  },
   trail: {
     stroke: 'grey',
   },

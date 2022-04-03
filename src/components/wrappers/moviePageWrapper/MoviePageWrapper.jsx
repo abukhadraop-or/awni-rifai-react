@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import StyledMoviePageWrapper from 'components/wrappers/moviePageWrapper/moviePageWrapper.styled';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 /**
  *  A wrapper for the movie page.
  * @param {object} props
- * @param {JSX} children 
+ * @param {JSX} children
  * @return {JSX.Element}
  */
 function MoviePageWrapper({ children }) {

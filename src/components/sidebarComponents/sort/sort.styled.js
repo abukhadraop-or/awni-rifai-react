@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import  viewPorts  from 'global-constants/viewPorts';
+import viewPorts from 'global-variables/viewPorts';
 
 export const SortHead = styled.div`
   margin-bottom: ${({ exapndList }) => (exapndList ? '1rem' : '0rem')};
@@ -39,4 +39,3 @@ export const CardWrapper = styled.div`
     height: fit-content;
   }
 `;
-

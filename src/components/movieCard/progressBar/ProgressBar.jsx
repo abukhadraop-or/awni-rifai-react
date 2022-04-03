@@ -10,7 +10,7 @@ import {
 /**
  * Progress bar that accepts voteAverage as a prop.
  * @param {object} props
- * @param {number} props.voteAverage 
+ * @param {number} props.voteAverage
  * @return {JSX.Element}
  */
 function ProgressBar({ voteAverage }) {

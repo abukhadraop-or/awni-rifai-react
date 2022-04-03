@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React  , useState} from 'react';
 import CardImage from 'components/movieCard/cardImage/CardImage';
 import PropTypes from 'prop-types';
 import CardContent from 'components/movieCard/cardContent/CardContent';
@@ -10,9 +10,11 @@ import {
 import ProgressBar from 'components/movieCard/progressBar/ProgressBar';
 import { MoreIcon } from 'components/navigation/shared/shared.styled';
 import MoreList from 'components/movieCard/moreList/MoreList';
-import { backupImagePath } from 'global-constants/envConstants';
+import { backupImagePath } from 'global-variables/envConstants';
+import useClickOutside from 'helper-functions/customHooks';
 
 const BACKUP_IMAGE_PATH = backupImagePath;
+
 
 /**
  * Show Movie Card
@@ -21,26 +23,16 @@ const BACKUP_IMAGE_PATH = backupImagePath;
  * @return {JSX.Element}
  */
 function MovieCard({ data }) {
-  const cardRef = useRef();
   const [showMore, setShowMore] = useState(false);
   /**
    * Function that handles the click outside the component
    * @param {object} e The event that triggered when the click initiated.
    */
-  const clickOutHandler = (e) => {
-    if (!cardRef.current.contains(e.target)) setShowMore(false);
-  };
-
-  useEffect(() => {
-    if (!showMore) return {};
-    document.addEventListener('mousedown', clickOutHandler);
-    return () => {
-      document.removeEventListener('mousedown', clickOutHandler);
-    }
-  }, [showMore]);
-
+  
+  const domeNode=useClickOutside(()=>setShowMore(false));
+  
   return (
-    <MovieCardContainer ref={cardRef}>
+    <MovieCardContainer ref={domeNode}>
       {showMore ? <Overlay onClick={() => setShowMore(false)} /> : ''}
       <ImageContainer>
         <CardImage

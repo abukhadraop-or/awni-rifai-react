@@ -17,7 +17,7 @@ function DesktopNavbar() {
         margin="Desktop"
         alt="Website Logo"
       />
-      <LeftNavigationMenu/>
+      <LeftNavigationMenu />
       <RightNavigationMenu />
     </StyledDesktopNavbar>
   );

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledNavigationItem = styled.li`
   color: white;
@@ -14,5 +14,5 @@ export const StyledNavigationItem = styled.li`
 export const StyledChildrenItem = styled.li`
   color: black;
   font-weight: 400;
-  margin-top: .6rem;
+  margin-top: 0.6rem;
 `;
