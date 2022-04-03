@@ -25,7 +25,7 @@ export const BurgerIcon = styled.div`
   align-items: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  border: 3px solid white;
+  
 `;
 export const BurgerInnerDiv = styled.div`
   width: 1.5rem;
