@@ -16,6 +16,7 @@ export const MovieCardContainer = styled.div`
     display: block;
     height: auto;
     max-height: fit-content;
+    max-width: 12rem;
   }
 `;
 

@@ -9,7 +9,7 @@ const StyledDesktopNavbar = styled.div`
     align-items: center;
     display: flex;
     height: 100%;
-    padding: 0 16rem;
+    padding: 0 10vw;
   }
 `;
 export default StyledDesktopNavbar;
