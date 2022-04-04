@@ -34,9 +34,13 @@ function MobileNavbar() {
           aria-hidden="true"
         />
       </UserAndSearchWrapper>
-      <MobileNavigationMenuWrapper showNavMenu={showNavMenu}>
-        <MobileMenu />
-      </MobileNavigationMenuWrapper>
+      {showNavMenu ? (
+        <MobileNavigationMenuWrapper showNavMenu={showNavMenu}>
+          <MobileMenu />
+        </MobileNavigationMenuWrapper>
+      ) : (
+        ''
+      )}
     </StyledMobileNavBar>
   );
 }

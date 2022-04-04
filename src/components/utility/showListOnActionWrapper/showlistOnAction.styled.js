@@ -11,7 +11,7 @@ export const StyledShowListOnActionWrapper = styled.div`
   min-width: 200px;
   padding: 1rem;
   text-align: left;
-  top: 2rem;
+  top: 1.3rem;
 `;
 export const StyledUnorderedList = styled.ul`
   list-style-type: none;

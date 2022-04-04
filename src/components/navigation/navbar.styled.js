@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledNavBar = styled.nav`
   width: 100vw;
@@ -10,5 +10,6 @@ const StyledNavBar = styled.nav`
   padding: 0.6rem 0;
   font-size: 0.8rem;
   z-index: 50;
+  display: ${({ scrolled }) => (scrolled === 'down' ? 'none' : 'block')};
 `;
 export default StyledNavBar;

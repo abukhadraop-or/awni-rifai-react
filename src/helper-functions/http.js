@@ -11,7 +11,7 @@ const get = async (url, headers = {}) => {
       ...headers,
     },
   });
-  
+
   return response.json();
 };
 

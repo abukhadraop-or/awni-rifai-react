@@ -25,7 +25,6 @@ export const BurgerIcon = styled.div`
   align-items: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  
 `;
 export const BurgerInnerDiv = styled.div`
   width: 1.5rem;
@@ -56,10 +55,10 @@ export const MobileNavigationMenuWrapper = styled.div`
   background-color: #203953;
   position: absolute;
   color: black;
-  height: 95vh;
+  height: 92.5vh;
   left: 0;
   padding: 20px;
-  top: 5vh;
+  top: 7.5vh;
   transition: display 4s;
   width: 90%;
   z-index: 100;
@@ -85,22 +84,27 @@ export const MobileNavigationMenuWrapper = styled.div`
     0% {
       left: 0;
       display: block;
+      opacity: 1;
     }
     25% {
       left: -25vw;
       display: block;
+      opacity: 1;
     }
     50% {
       left: -50vw;
       display: block;
+      opacity: 1;
     }
     75% {
       left: -75vw;
       display: block;
+      opacity: 1;
     }
     100% {
       left: -100vw;
       display: block;
+      opacity: 1;
     }
   }
   animation: ${({ showNavMenu }) =>
