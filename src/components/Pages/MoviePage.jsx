@@ -4,7 +4,7 @@ import CardsGridWrapper from 'components/wrappers/cardsWrapper/CardsGridWrapper'
 import Sort from 'components/sidebarComponents/sort/Sort';
 import getAllMovies from 'api-calls/movie-api';
 import MovieCard from 'components/movieCard/MovieCard';
-import MainHeader from 'components/Pages/moviePage.Styled';
+import { MainHeader, MoreBtn } from 'components/Pages/moviePage.Styled';
 
 /**
  * Renders The whole Movie Page.
@@ -13,17 +13,20 @@ import MainHeader from 'components/Pages/moviePage.Styled';
 function MoviePage() {
   const [movies, setMoviesData] = useState([]);
   const [sortType, setSortType] = useState('');
+  const [paginate,setPaginate]=useState(1);
 
   useEffect(() => {
     /**
      * set the movies to the array fetched from getAllMovies.
      */
     const setMovies = async () => {
-      const fetchedMovies = await getAllMovies(1, sortType);
-      setMoviesData(fetchedMovies);
+      const fetchedMovies = await getAllMovies(paginate, sortType);
+      setMoviesData((prev) => [...prev, ...fetchedMovies]);
     };
     setMovies();
-  }, [sortType]);
+  }, [sortType,paginate]);
+
+  
 
   return (
     <MoviePageWrapper>
@@ -38,6 +41,8 @@ function MoviePage() {
           <MovieCard key={movie.id} data={movie} />
         ))}
       </CardsGridWrapper>
+      <div />
+      <MoreBtn onClick={()=>setPaginate(prev=>prev+1)}>Load More</MoreBtn>
     </MoviePageWrapper>
   );
 }

@@ -9,6 +9,7 @@ const StyledCardsGridWrapper = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-template-rows: auto;
     grid-gap: 3rem;
+    
   }
 
   
