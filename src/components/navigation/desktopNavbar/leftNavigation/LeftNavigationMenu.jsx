@@ -4,33 +4,39 @@ import LeftNavigationMenuWrapper from 'components/navigation/desktopNavbar/leftN
 
 const menuItems = [
   {
+    key: 'movies',
     menuItemChildren: [
-      { childrenTitle: 'popular', link: '' },
-      { childrenTitle: 'Now Playing', link: '' },
-      { childrenTitle: 'Upcoming', link: '' },
-      { childrenTitle: 'Top Rated', link: '' },
+      { childrenTitle: 'popular', link: '', key: 'popular' },
+      { childrenTitle: 'Now Playing', link: '', key: 'Now Playing' },
+      { childrenTitle: 'Upcoming', link: '', key: 'Upcoming' },
+      { childrenTitle: 'Top Rated', link: '', key: 'Top Rated' },
     ],
     menuTitle: 'movies',
   },
   {
+    key: 'TV Shows',
     menuItemChildren: [
-      { childrenTitle: 'Popular', link: '' },
-      { childrenTitle: 'Airing Today', link: '' },
-      { childrenTitle: 'On TV', link: '' },
-      { childrenTitle: 'Top Rated', link: '' },
+      { childrenTitle: 'Popular', link: '', key: 'popular' },
+      { childrenTitle: 'Airing Today', link: '', key: 'Airing Today' },
+      { childrenTitle: 'On TV', link: '', key: 'On TV' },
+      { childrenTitle: 'Top Rated', link: '', key: 'Top Rated' },
     ],
     menuTitle: 'TV Shows',
   },
   {
-    menuItemChildren: [{ childrenTitle: 'Popular People', link: '' }],
+    key: 'People',
+    menuItemChildren: [
+      { childrenTitle: 'Popular People', link: '', key: 'Popular People' },
+    ],
     menuTitle: 'People',
   },
   {
+    key: 'More',
     menuItemChildren: [
-      { childrenTitle: 'Discussions', link: '' },
-      { childrenTitle: 'Leaderboard', link: '' },
-      { childrenTitle: 'Support', link: '' },
-      { childrenTitle: 'API', link: '' },
+      { childrenTitle: 'Discussions', link: '', key: 'Discussion' },
+      { childrenTitle: 'Leaderboard', link: '', key: 'Leaderboard' },
+      { childrenTitle: 'Support', link: '', key: 'Support' },
+      { childrenTitle: 'API', link: '', key: 'API' },
     ],
     menuTitle: 'More',
   },
@@ -38,7 +44,7 @@ const menuItems = [
 
 /**
  * Show Left Navigation Menu.
- * 
+ *
  * @return {JSX.Element}
  */
 function LeftNavigationMenu() {
@@ -46,7 +52,7 @@ function LeftNavigationMenu() {
     <LeftNavigationMenuWrapper>
       {menuItems.map((item) => (
         <NavigationItem
-          key={Math.random()}
+          key={item.key}
           menuItemChildren={item.menuItemChildren}
           menuTitle={item.menuTitle}
         />

@@ -12,30 +12,37 @@ import {
 
 const sortOptions = [
   {
+    key:'popularity.asc',
     text: 'Popularity Ascending',
     val: ' popularity.asc',
   },
   {
+    key:'vote_average.asc',
     text: 'Rating Ascending',
     val: 'vote_average.asc',
   },
   {
+    key:'vote_average.desc',
     text: 'Rating Descending',
     val: 'vote_average.desc',
   },
   {
+    key:'primary_release_date.desc',
     text: 'Release Date Descending',
     val: 'primary_release_date.desc',
   },
   {
+    key:'primary_release_date.asc',
     text: 'Release Date Ascending',
     val: 'primary_release_date.asc',
   },
   {
+    key:'title.asc', 
     text: 'Title (A-Z)',
     val: 'title.asc',
   },
   {
+    key:'title.desc',
     text: 'Title (Z-A)',
     val: 'title.desc',
   },

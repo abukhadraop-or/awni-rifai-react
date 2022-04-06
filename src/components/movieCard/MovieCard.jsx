@@ -15,7 +15,6 @@ import useClickOutside from 'helper-functions/customHooks';
 
 const BACKUP_IMAGE_PATH = backupImagePath;
 
-
 /**
  * Show Movie Card.
  * 

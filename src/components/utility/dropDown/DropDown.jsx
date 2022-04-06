@@ -15,7 +15,7 @@ function DropDown({ options, setSortType }) {
   return (
     <StyledDropDown onChange={(e) => setSortType(e.target.value)}>
       {options.map((option) => (
-        <option value={option.val}>{option.text}</option>
+        <option key={option.key} value={option.val}>{option.text}</option>
       ))}
     </StyledDropDown>
   );
