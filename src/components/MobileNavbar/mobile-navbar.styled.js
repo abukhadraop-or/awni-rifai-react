@@ -5,7 +5,7 @@ export const StyledMobileNavBar = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 0.8rem;
   position: relative;
   z-index: 200;
 
@@ -17,8 +17,8 @@ export const UserIcon = styled.i`
   color: white;
 `;
 export const BurgerIcon = styled.div`
-  width: 80px;
-  height: 80px;
+  width: 4rem;
+  height:4rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -28,39 +28,43 @@ export const BurgerIcon = styled.div`
 `;
 export const BurgerInnerDiv = styled.div`
   width: 1.5rem;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.9);
+  height: 0.1rem;
+  background: #fff;
+  opacity: 0.9;
   border-radius: 5px;
+
   ::before,
   ::after {
     content: '';
     position: absolute;
     width: 1.5rem;
-    height: 4px;
+    height: 0.1rem;
     background: #ffffff;
     opacity: 0.9;
     border-radius: 5px;
     transition: all 0.2s ease-in-out;
   }
+
   ::before {
-    transform: translateY(-6px);
+    transform: translateY(-0.4rem);
   }
+  
   ::after {
-    transform: translateY(6px);
+    transform: translateY(0.4rem);
   }
 `;
 export const UserAndSearchWrapper = styled.div``;
 
 export const MobileNavigationMenuWrapper = styled.div`
   background-color: #203953;
-  position: absolute;
   color: black;
-  height: 92.5vh;
+  height: 95vh;
   left: 0;
-  padding: 20px;
-  top: 7.5vh;
+  padding: 1.5rem;
+  position: absolute;
+  top: 6.5vh;
   transition: display 4s;
-  width: 90%;
+  width:90%;
   z-index: 100;
 
   @keyframes translateRight {

@@ -12,7 +12,7 @@ export const Title = styled.h2`
 `;
 
 export const SortBody = styled.div`
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #0000001a;
   padding-top: 0.5rem;
 `;
 

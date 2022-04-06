@@ -35,12 +35,12 @@ export const ProgressBarContainer = styled.div`
 
   @media (min-width: ${viewPorts.mobile}) {
     position: absolute;
-    bottom: -10px;
+    bottom: -0.8rem;
     display: initial;
     left: 5px;
     margin: 0;
     padding: 0;
-    width: 20%;
+    
     .CircularProgressbar-path {
       stroke: ${({ green }) => (green === 'true' ? '#21d07a' : '#d2d531')};
     }
@@ -48,8 +48,8 @@ export const ProgressBarContainer = styled.div`
 `;
 
 export const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
+  background-color: #00000080;
+  backdrop-filter: blur(2rem);
   position: absolute;
   top: 0;
   width: 100%;

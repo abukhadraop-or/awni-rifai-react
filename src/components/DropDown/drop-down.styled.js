@@ -7,6 +7,6 @@ const StyledDropDown = styled.select`
   width: 100%;
   border: none;
   border-radius: 0.2rem;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.08rem;
 `;
 export default StyledDropDown;

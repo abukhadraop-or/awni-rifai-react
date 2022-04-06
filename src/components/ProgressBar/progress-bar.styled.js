@@ -8,10 +8,11 @@ export const ProgressBarContainer = styled.div`
     position: absolute;
     bottom: -10px;
     display: initial;
-    left: 5px;
+    left: 0.3rem;
     margin: 0;
     padding: 0;
     width: 20%;
+    
     .CircularProgressbar-path {
       stroke: ${({ isGreen }) => (isGreen? '#21d07a' : '#d2d531')};
     }

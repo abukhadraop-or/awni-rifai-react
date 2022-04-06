@@ -31,7 +31,7 @@ export const Title = styled.h6`
 export const Link = styled.a`
   font-weight: 600;
   font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: #00000099;
 `;
 
 export const Chevron = styled.i`

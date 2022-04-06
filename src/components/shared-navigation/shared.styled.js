@@ -21,8 +21,8 @@ export const MoreIcon = styled.i`
   @media (min-width: ${viewPorts.mobile}) {
     display: initial;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.7rem;
+    right: 0.7rem;
     font-size: 0.8rem;
     background-color: #fff;
     padding: 0.2rem;

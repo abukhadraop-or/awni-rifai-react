@@ -14,7 +14,7 @@ export const MoreBtn = styled.button`
   padding: .5rem 2rem;
   font-size: 1.8rem;
   color: white;
-  background-color: rgb(1,180,228);
+  background-color: #01b4e4;
   border-radius: 8px;
   font-weight: 600;
 
