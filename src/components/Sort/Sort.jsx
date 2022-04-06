@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import DropDown from 'components/DropDown/DropDown';
 import {
-  H2,
-  H3,
+  Title,
+  SubTitle,
   SortBody,
   SortHead,
   ChevronIcon,
@@ -70,7 +70,7 @@ function Sort({ setSortType }) {
         onKeyDown={() => setExpandList((prev) => !prev)}
         onClick={() => setExpandList((prev) => !prev)}
       >
-        <H2>Sort</H2>
+        <Title>Sort</Title>
         <ChevronIcon
           direction={direction}
           className={`fa solid fa-chevron-${direction}`}
@@ -79,7 +79,7 @@ function Sort({ setSortType }) {
 
       {expandList ? (
         <SortBody>
-          <H3>Sort Results By</H3>
+          <SubTitle>Sort Results By</SubTitle>
           <DropDown setSortType={setSortType} options={sortOptions} />
         </SortBody>
       ) : (

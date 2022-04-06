@@ -11,15 +11,15 @@ import debounce from 'helper-functions/debounce';
  */
 function NavBar() {
 
-  const [y, setY] = useState(0);
+  const [scrollVerticalPosition, setScrollVerticalPosition] = useState(0);
   const [scrolled, setScrolled] = useState('not scrolled');
 
   /**
    * Handle scroll event by setting scroll state to up or down.
    */
   const scrollHandler = () => {
-    setY(window.scrollY);
-    if (window.scrollY > y) setScrolled('down');
+    setScrollVerticalPosition(window.scrollY);
+    if (window.scrollY > scrollVerticalPosition) setScrolled('down');
     else {
       setScrolled('up');
     }
@@ -29,7 +29,7 @@ function NavBar() {
 
   useEffect(() => {
     window.addEventListener('scroll', processChange);
-  }, [y]);
+  }, [scrollVerticalPosition]);
 
   return (
     <StyledNavBar scrolled={scrolled}>

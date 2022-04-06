@@ -22,13 +22,13 @@ export const LowerSection = styled.div`
   padding: 0.8rem;
 `;
 
-export const H6 = styled.h6`
+export const Title = styled.h6`
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 0.7rem;
 `;
 
-export const A = styled.a`
+export const Link = styled.a`
   font-weight: 600;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.6);

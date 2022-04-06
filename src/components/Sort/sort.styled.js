@@ -6,7 +6,7 @@ export const SortHead = styled.div`
   position: relative;
 `;
 
-export const H2 = styled.h2`
+export const Title = styled.h2`
   font-size: 1rem;
   font-weight: 600;
 `;
@@ -16,7 +16,7 @@ export const SortBody = styled.div`
   padding-top: 0.5rem;
 `;
 
-export const H3 = styled.h3`
+export const SubTitle = styled.h3`
   font-size: 1.1rem;
   font-weight: 200;
 `;
