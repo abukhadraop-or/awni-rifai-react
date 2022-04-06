@@ -38,6 +38,7 @@ const menuItems = [
 
 /**
  * Show Left Navigation Menu.
+ * 
  * @return {JSX.Element}
  */
 function LeftNavigationMenu() {

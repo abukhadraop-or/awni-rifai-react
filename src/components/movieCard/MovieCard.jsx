@@ -17,16 +17,18 @@ const BACKUP_IMAGE_PATH = backupImagePath;
 
 
 /**
- * Show Movie Card
- * @param {object} props
- * @param {object} props.data Movie details fetched from API.
+ * Show Movie Card.
+ * 
+ * @param {Object} props
+ * @param {Object} props.data Movie details fetched from API.
+ * 
  * @return {JSX.Element}
  */
 function MovieCard({ data }) {
   const [showMore, setShowMore] = useState(false);
   /**
    * Function that handles the click outside the component
-   * @param {object} e The event that triggered when the click initiated.
+   * @param {Object} e The event that triggered when the click initiated.
    */
   
   const domeNode=useClickOutside(()=>setShowMore(false));
@@ -58,17 +60,22 @@ function MovieCard({ data }) {
     </MovieCardContainer>
   );
 }
+
 MovieCard.propTypes = {
   data: PropTypes.shape({
+
     id: PropTypes.number,
     overview: PropTypes.string,
     poster_path: PropTypes.string,
     release_date: PropTypes.string,
     title: PropTypes.string,
     vote_average: PropTypes.number,
+
   }),
 };
+
 MovieCard.defaultProps = {
   data: {},
 };
+
 export default MovieCard;

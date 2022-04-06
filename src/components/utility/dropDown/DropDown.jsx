@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 
 /**
  * Shows Drop Down Menu.
- * @param  {object} props
+ * 
+ * @param  {Object} props
  * @param {Array} props.options Provide a list of options for the DropDown.
  * @param {Function} props.setSortType A function that is called on DropDown change.
- * @returns {JSX.Element}
+ * 
+ * @return {JSX.Element}
  */
 function DropDown({ options, setSortType }) {
   return (
@@ -18,10 +20,12 @@ function DropDown({ options, setSortType }) {
     </StyledDropDown>
   );
 }
+
 DropDown.defaultProps = {
   options: [],
   setSortType: null,
 };
+
 DropDown.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
@@ -31,4 +35,5 @@ DropDown.propTypes = {
   ),
   setSortType: PropTypes.func,
 };
+
 export default DropDown;

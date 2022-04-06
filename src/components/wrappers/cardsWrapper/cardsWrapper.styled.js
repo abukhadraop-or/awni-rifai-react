@@ -11,7 +11,5 @@ const StyledCardsGridWrapper = styled.div`
     grid-gap: 3rem;
     
   }
-
-  
 `;
 export default StyledCardsGridWrapper;

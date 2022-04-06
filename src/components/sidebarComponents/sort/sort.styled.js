@@ -5,18 +5,22 @@ export const SortHead = styled.div`
   margin-bottom: ${({ exapndList }) => (exapndList ? '1rem' : '0rem')};
   position: relative;
 `;
+
 export const H2 = styled.h2`
   font-size: 1rem;
   font-weight: 600;
 `;
+
 export const SortBody = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 0.5rem;
 `;
+
 export const H3 = styled.h3`
   font-size: 1.1rem;
   font-weight: 200;
 `;
+
 export const ChevronIcon = styled.i`
   position: absolute;
   right: 0;
@@ -24,6 +28,7 @@ export const ChevronIcon = styled.i`
   transform: translateY(-50%);
   z-index: 0;
 `;
+
 export const CardWrapper = styled.div`
   background-color: white;
   border-left: 1px;
@@ -34,6 +39,7 @@ export const CardWrapper = styled.div`
   padding: 1rem 1.5rem;
   position: relative;
   width: 100%;
+  
   @media (min-width: ${viewPorts.mobile}) {
     display: block;
     height: fit-content;

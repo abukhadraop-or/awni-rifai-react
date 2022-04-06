@@ -6,7 +6,8 @@ import { Logo } from 'components/navigation/shared/shared.styled';
 
 /**
  * Desktop Navbar container.
- * @returns {JSX.Element}
+ * 
+ * @return {JSX.Element}
  */
 function DesktopNavbar() {
   return (
@@ -22,4 +23,5 @@ function DesktopNavbar() {
     </StyledDesktopNavbar>
   );
 }
+
 export default DesktopNavbar;

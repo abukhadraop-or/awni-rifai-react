@@ -43,18 +43,21 @@ const sortOptions = [
 
 /**
  * Show Sort Drop Down.
- * @param {object} props
+ * @param {Object} props
  * @param {function} props.setSortType A function that is called when the sort type is changed.
+ * 
  * @return {JSX.Element}
  */
+
 function Sort({ setSortType }) {
-  const [exapndList, setExpandList] = useState(false);
-  const direction = exapndList ? 'down' : 'right';
+
+  const [expandList, setExpandList] = useState(false);
+  const direction = expandList ? 'down' : 'right';
 
   return (
     <CardWrapper>
       <SortHead
-        exapndList={exapndList}
+        expandList={expandList}
         role="button"
         tabIndex={0}
         onKeyDown={() => setExpandList((prev) => !prev)}
@@ -67,7 +70,7 @@ function Sort({ setSortType }) {
         />
       </SortHead>
 
-      {exapndList ? (
+      {expandList ? (
         <SortBody>
           <H3>Sort Results By</H3>
           <DropDown setSortType={setSortType} options={sortOptions} />
@@ -82,7 +85,9 @@ function Sort({ setSortType }) {
 Sort.defaultProps = {
   setSortType: () => {},
 };
+
 Sort.propTypes = {
   setSortType: PropTypes.func,
 };
+
 export default Sort;

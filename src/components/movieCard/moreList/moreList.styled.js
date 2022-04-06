@@ -12,23 +12,28 @@ export const StyledMoreList = styled.div`
   padding: 0;
   width: 150%;
 `;
+
 export const UpperSection = styled.div`
   padding: 0.8rem;
   border-bottom: solid 1px #3333;
 `;
+
 export const LowerSection = styled.div`
   padding: 0.8rem;
 `;
+
 export const H6 = styled.h6`
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 0.7rem;
 `;
+
 export const A = styled.a`
   font-weight: 600;
   font-size: 0.8rem;
   color: rgba(0, 0, 0, 0.6);
 `;
+
 export const Chevron = styled.i`
   color: black;
   font-weight: 600;

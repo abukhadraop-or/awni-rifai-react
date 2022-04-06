@@ -7,10 +7,12 @@ import {
 } from 'components/navigation/desktopNavbar/leftNavigation/navigationItem/NavigationItem.styled';
 
 /**
- * Shows Navigation Item
+ * Shows Navigation Item.
+ * 
  * @param {props}
  * @param {string} props.menuTitle
  * @param {arrayOf{Objects}} props.menuItemChildren Array of menu items (objects).
+ * 
  * @return {JSX.Element}
  */
 function NavigationItem({ menuTitle, menuItemChildren }) {
@@ -42,8 +44,10 @@ NavigationItem.propTypes = {
   ),
   menuTitle: PropTypes.string,
 };
+
 NavigationItem.defaultProps = {
   menuItemChildren: [],
   menuTitle: '',
 };
+
 export default NavigationItem;

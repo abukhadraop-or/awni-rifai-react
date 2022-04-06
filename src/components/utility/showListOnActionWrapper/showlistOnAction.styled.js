@@ -13,6 +13,7 @@ export const StyledShowListOnActionWrapper = styled.div`
   text-align: left;
   top: 1.3rem;
 `;
+
 export const StyledUnorderedList = styled.ul`
   list-style-type: none;
 `;

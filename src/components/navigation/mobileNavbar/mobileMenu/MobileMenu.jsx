@@ -23,7 +23,8 @@ const secondaryMobileMenuItems = [
 ];
 
 /**
- * Mobile menu container
+ * Mobile menu container.
+ * 
  * @return {JSX.Element}
  */
 function MobileMenu() {

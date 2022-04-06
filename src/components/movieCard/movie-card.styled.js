@@ -46,6 +46,7 @@ export const ProgressBarContainer = styled.div`
     }
   }
 `;
+
 export const Overlay = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px);

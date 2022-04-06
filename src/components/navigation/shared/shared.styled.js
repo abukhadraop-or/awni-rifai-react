@@ -7,14 +7,17 @@ export const Logo = styled.img`
   margin: ${({ margin }) => (margin === 'Desktop' ? '1.5rem' : '0 auto')};
   width: ${({ width }) => (width === 'Desktop' ? '9.5rem' : '5.5rem')};
 `;
+
 export const SearchIcon = styled.i`
   color: lightblue;
   font-size: ${({ size }) => (size === 'Mobile' ? '1rem' : '1.3rem')};
   margin-left: 1rem;
   margin-right: 1rem;
 `;
+
 export const MoreIcon = styled.i`
   display: none;
+
   @media (min-width: ${viewPorts.mobile}) {
     display: initial;
     position: absolute;
@@ -25,6 +28,7 @@ export const MoreIcon = styled.i`
     padding: 0.2rem;
     border-radius: 50%;
     opacity: 0.4;
+    
     :hover {
       opacity: 1;
       background-color: darkblue;

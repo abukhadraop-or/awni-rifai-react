@@ -9,10 +9,12 @@ import {
 
 /**
  * Display Card content.
- * @param {object} props
+ * 
+ * @param {Object} props
  * @param {string} props.title  Movie title fetched from the data object.
  * @param {string} props.releaseDate Movie release_date fetched from the data object.
  * @param {string} props.description Movie description fetched from the data object.
+ * 
  * @return {JSX.Element}
  */
 function CardContent({ title, releaseDate, description }) {
@@ -26,11 +28,13 @@ function CardContent({ title, releaseDate, description }) {
     </StyledCardContent>
   );
 }
+
 CardContent.propTypes = {
   description: PropTypes.string,
   releaseDate: PropTypes.string,
   title: PropTypes.string,
 };
+
 CardContent.defaultProps = {
   description: '',
   releaseDate: '',

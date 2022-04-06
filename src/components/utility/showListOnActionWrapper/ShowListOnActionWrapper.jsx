@@ -7,12 +7,13 @@ import {
 
 /**
  * A component that shows it's children based on an bool passed to it.
- * @param {object} props
+ * @param {Object} props
  * @param {JSX} props.children
  * @param {bool}props.actionState
  * @return {JSX.Element}
  */
 function ShowListOnActionWrapper({ children, actionState }) {
+
   return (
     <StyledShowListOnActionWrapper actionState={actionState}>
       <StyledUnorderedList>{children}</StyledUnorderedList>

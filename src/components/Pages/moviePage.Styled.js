@@ -6,6 +6,7 @@ export const MainHeader = styled.h2`
   font-weight: 600;
   font-size: 1.4rem;
 `;
+
 export const MoreBtn = styled.button`
   margin: auto;
   margin-top: 1.5rem;
@@ -16,6 +17,7 @@ export const MoreBtn = styled.button`
   background-color: rgb(1,180,228);
   border-radius: 8px;
   font-weight: 600;
+
   :hover{
     color: black;
     cursor: pointer;

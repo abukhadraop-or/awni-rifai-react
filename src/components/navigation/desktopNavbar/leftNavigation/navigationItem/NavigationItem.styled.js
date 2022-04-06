@@ -11,6 +11,7 @@ export const StyledNavigationItem = styled.li`
     cursor: pointer;
   }
 `;
+
 export const StyledChildrenItem = styled.li`
   color: black;
   font-weight: 400;

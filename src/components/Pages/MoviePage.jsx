@@ -8,25 +8,28 @@ import { MainHeader, MoreBtn } from 'components/Pages/moviePage.Styled';
 
 /**
  * Renders The whole Movie Page.
+ * 
  * @return {JSX.Element}
  */
 function MoviePage() {
+
   const [movies, setMoviesData] = useState([]);
   const [sortType, setSortType] = useState('');
   const [paginate,setPaginate]=useState(1);
 
   useEffect(() => {
+
     /**
-     * set the movies to the array fetched from getAllMovies.
+     * Set the movies to the array fetched from getAllMovies.
      */
     const setMovies = async () => {
       const fetchedMovies = await getAllMovies(paginate, sortType);
       setMoviesData((prev) => [...prev, ...fetchedMovies]);
     };
-    setMovies();
-  }, [sortType,paginate]);
 
-  
+    setMovies();
+
+  }, [sortType,paginate]);
 
   return (
     <MoviePageWrapper>
@@ -46,4 +49,5 @@ function MoviePage() {
     </MoviePageWrapper>
   );
 }
+
 export default MoviePage;

@@ -8,6 +8,11 @@ import {
   A,
 } from 'components/movieCard/moreList/moreList.styled';
 
+/**
+ * Render More List in the movie card.
+ * 
+ * @return {JSX.Element}
+ */
 function MoreList() {
   return (
     <StyledMoreList>

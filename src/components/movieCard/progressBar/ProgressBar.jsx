@@ -9,8 +9,10 @@ import {
 
 /**
  * Progress bar that accepts voteAverage as a prop.
- * @param {object} props
+ * 
+ * @param {Object} props
  * @param {number} props.voteAverage
+ * 
  * @return {JSX.Element}
  */
 function ProgressBar({ voteAverage }) {
@@ -30,7 +32,9 @@ function ProgressBar({ voteAverage }) {
 ProgressBar.propTypes = {
   voteAverage: PropTypes.number,
 };
+
 ProgressBar.defaultProps = {
   voteAverage: 0,
 };
+
 export default ProgressBar;

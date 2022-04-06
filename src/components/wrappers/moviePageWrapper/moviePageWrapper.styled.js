@@ -3,6 +3,7 @@ import viewPorts from 'global-variables/viewPorts';
 
 const StyledMoviePageWrapper = styled.main`
   padding: 11vh 2rem;
+  
   @media (min-width: ${viewPorts.mobile}) {
     padding: 7rem 10vw;
     display: grid;

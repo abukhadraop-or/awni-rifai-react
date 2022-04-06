@@ -16,6 +16,7 @@ export const ProgressBarContainer = styled.div`
     }
   }
 `;
+
 export const progressBarStyles = {
   background: {
     fill: 'black',

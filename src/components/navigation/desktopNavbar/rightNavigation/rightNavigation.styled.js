@@ -6,6 +6,7 @@ export const StyledItemList = styled.li`
   margin-right: 1.2rem;
   text-transform: capitalize;
 `;
+
 export const StyledRightNavigationMenu = styled.div`
   align-items: center;
   color: white;
@@ -14,12 +15,14 @@ export const StyledRightNavigationMenu = styled.div`
   margin-left: auto;
   margin-right: 0;
 `;
+
 export const PlusIcon = styled.i`
   color: white;
   font-size: 1rem;
   font-weight: 600;
   margin-right: 1.2rem;
 `;
+
 export const LanguageIcon = styled.span`
   align-items: center;
   border-radius: 0.3rem;

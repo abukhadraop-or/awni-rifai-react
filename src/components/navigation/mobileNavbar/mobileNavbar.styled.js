@@ -80,6 +80,7 @@ export const MobileNavigationMenuWrapper = styled.div`
       left: 0;
     }
   }
+
   @keyframes translateLeft {
     0% {
       left: 0;
@@ -107,6 +108,7 @@ export const MobileNavigationMenuWrapper = styled.div`
       opacity: 1;
     }
   }
+  
   animation: ${({ showNavMenu }) =>
       !showNavMenu ? 'translateLeft' : 'translateRight'}
     0.3s linear;

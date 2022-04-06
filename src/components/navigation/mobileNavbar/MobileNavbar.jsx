@@ -12,6 +12,7 @@ import { Logo, SearchIcon } from 'components/navigation/shared/shared.styled';
 
 /**
  * Mobile Navbar container.
+ * 
  * @return {JSX.Element}
  */
 function MobileNavbar() {

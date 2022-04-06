@@ -9,6 +9,7 @@ import { SearchIcon } from 'components/navigation/shared/shared.styled';
 
 /**
  * Show Right Navigation Menu.
+ * 
  * @return {JSX.Element}
  */
 function RightNavigationMenu() {
@@ -22,4 +23,5 @@ function RightNavigationMenu() {
     </StyledRightNavigationMenu>
   );
 }
+
 export default RightNavigationMenu;

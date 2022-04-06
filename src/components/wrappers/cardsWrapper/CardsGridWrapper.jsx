@@ -4,16 +4,20 @@ import StyledCardsGridWrapper from 'components/wrappers/cardsWrapper/cardsWrappe
 
 /**
  * A wrapper for all the cards.
- * @param {object} props
+ * 
+ * @param {Object} props
  * @param {JSX.Element} props.children
+ * 
  * @return {JSX.Element}
  */
 function CardsGridWrapper({ children }) {
   return <StyledCardsGridWrapper>{children}</StyledCardsGridWrapper>;
 }
+
 CardsGridWrapper.defaultProps = {
   children: null,
 };
+
 CardsGridWrapper.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
 };
