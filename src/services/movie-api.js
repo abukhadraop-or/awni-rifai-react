@@ -6,11 +6,13 @@ const API_KEY = apiKey;
 
 /**
  *  Fetch all movies from the base link provided.
+ * 
  * @param {number} page
  * @param {string} sort
  * @param {string} language
  * @param {boolean} includeAdult
  * @param {boolean} includeVideo
+ * 
  * @return {Promise<array>} Returns an array of movies.
  */
 const getAllMovies = async (
