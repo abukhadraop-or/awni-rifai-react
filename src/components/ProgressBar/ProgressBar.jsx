@@ -17,7 +17,7 @@ import {
  */
 function ProgressBar({ voteAverage }) {
   return (
-    <ProgressBarContainer green={voteAverage > 7 ? 'true' : 'false'}>
+    <ProgressBarContainer isGreen={voteAverage > 7}>
       <CircularProgressbar
         value={voteAverage}
         maxValue={10}

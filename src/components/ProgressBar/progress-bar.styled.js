@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import viewPorts from 'global-variables/viewPorts';
 
 export const ProgressBarContainer = styled.div`
   display: none;
 
-  @media (min-width: 820px) {
+  @media (min-width: ${viewPorts.mobile}) {
     position: absolute;
     bottom: -10px;
     display: initial;
@@ -12,7 +13,7 @@ export const ProgressBarContainer = styled.div`
     padding: 0;
     width: 20%;
     .CircularProgressbar-path {
-      stroke: ${({ green }) => (green === 'true' ? '#21d07a' : '#d2d531')};
+      stroke: ${({ isGreen }) => (isGreen? '#21d07a' : '#d2d531')};
     }
   }
 `;
