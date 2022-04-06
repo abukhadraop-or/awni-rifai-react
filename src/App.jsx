@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from 'components/navigation/NavBar';
-import GlobalStyle from 'globalStyles';
-import MoviePage from 'components/Pages/MoviePage';
+import Navbar from 'components/Navbar/NavBar';
+import GlobalStyle from 'global-styles';
+import MoviePage from 'components/MoviePage/MoviePage';
 
 function App() {
   return (
