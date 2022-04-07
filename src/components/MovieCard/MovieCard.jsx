@@ -8,7 +8,7 @@ import {
   Overlay,
 } from 'components/MovieCard/movie-card.styled';
 import ProgressBar from 'components/ProgressBar/ProgressBar';
-import { MoreIcon } from 'components/shared-navigation/shared.styled';
+import MoreIcon from 'components/MoreIcon/MoreIcon';
 import MoreList from 'components/MoreList/MoreList';
 import { backupImagePath } from 'global-variables/envConstants';
 import useClickOutside from 'custom-hooks/click-outside';
@@ -53,7 +53,6 @@ function MovieCard({ data }) {
       />
       <MoreIcon
         onClick={() => setShowMore((prev) => !prev)}
-        className="fas fa-ellipsis-h"
       />
       {showMore ? <MoreList /> : ''}
     </MovieCardContainer>

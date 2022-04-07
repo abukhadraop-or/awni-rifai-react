@@ -8,11 +8,12 @@ import {
   UserAndSearchWrapper,
   MobileNavigationMenuWrapper,
 } from 'components/MobileNavbar/mobile-navbar.styled';
-import { Logo, SearchIcon } from 'components/shared-navigation/shared.styled';
+import Logo from 'components/Logo/Logo';
+import SearchIcon from 'components/SearchIcon/SearchIcon';
 
 /**
  * Mobile Navbar container.
- * 
+ *
  * @return {JSX.Element}
  */
 function MobileNavbar() {
@@ -24,16 +25,11 @@ function MobileNavbar() {
       </BurgerIcon>
       <Logo
         src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
-        width="Mobile"
-        margin="Mobile"
+        isDesktop={false}
       />
       <UserAndSearchWrapper>
         <UserIcon className="fa fa-user" aria-hidden="true" />
-        <SearchIcon
-          size="Mobile"
-          className="fas fa-search"
-          aria-hidden="true"
-        />
+        <SearchIcon isDesktop={false} />
       </UserAndSearchWrapper>
       {showNavMenu ? (
         <MobileNavigationMenuWrapper showNavMenu={showNavMenu}>

@@ -5,7 +5,7 @@ import {
   PlusIcon,
   LanguageIcon,
 } from 'components/RightNavigation/right-navigation.styled';
-import { SearchIcon } from 'components/shared-navigation/shared.styled';
+import SearchIcon from 'components/SearchIcon/SearchIcon';
 
 /**
  * Show Right Navigation Menu.
@@ -19,7 +19,7 @@ function RightNavigationMenu() {
       <LanguageIcon>En</LanguageIcon>
       <StyledItemList>Login</StyledItemList>
       <StyledItemList>Join TMDB</StyledItemList>
-      <SearchIcon className="fas fa-search" aria-hidden="true" />
+      <SearchIcon isDesktop/>
     </StyledRightNavigationMenu>
   );
 }
