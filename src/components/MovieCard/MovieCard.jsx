@@ -25,11 +25,6 @@ const BACKUP_IMAGE_PATH = backupImagePath;
  */
 function MovieCard({ data }) {
   const [showMore, setShowMore] = useState(false);
-  /**
-   * Function that handles the click outside the component
-   * @param {Object} e The event that triggered when the click initiated.
-   */
-  
   const domeNode=useClickOutside(()=>setShowMore(false));
   
   return (
@@ -51,9 +46,7 @@ function MovieCard({ data }) {
         releaseDate={data.release_date}
         description={data.overview?.slice(0, 60)}
       />
-      <MoreIcon
-        onClick={() => setShowMore((prev) => !prev)}
-      />
+      <MoreIcon setShowMore={setShowMore}/>
       {showMore ? <MoreList /> : ''}
     </MovieCardContainer>
   );
