@@ -15,7 +15,7 @@ import {
 function ShowListOnActionWrapper({ children, actionState }) {
 
   return (
-    <StyledShowListOnActionWrapper actionState={actionState}>
+    <StyledShowListOnActionWrapper role="tooltip" actionState={actionState}>
       <StyledUnorderedList>{children}</StyledUnorderedList>
     </StyledShowListOnActionWrapper>
   );

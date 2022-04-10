@@ -22,10 +22,11 @@ function NavigationItem({ menuTitle, menuItemChildren }) {
     <StyledNavigationItem
       onMouseEnter={() => setActionState(true)}
       onMouseLeave={() => setActionState(false)}
+      role="listitem"
     >
       <ShowListOnActionWrapper actionState={actionState}>
         {menuItemChildren.map((item) => (
-          <StyledChildrenItem key={Math.random()}>
+          <StyledChildrenItem key={item.key}>
             {item.childrenTitle}
           </StyledChildrenItem>
         ))}

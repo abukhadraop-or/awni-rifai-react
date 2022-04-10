@@ -78,7 +78,7 @@ function Sort({ setSortType }) {
       </SortHead>
 
       {expandList ? (
-        <SortBody>
+        <SortBody role="tooltip">
           <SubTitle>Sort Results By</SubTitle>
           <DropDown setSortType={setSortType} options={sortOptions} />
         </SortBody>
