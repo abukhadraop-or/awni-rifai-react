@@ -2,8 +2,8 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import DropDown from 'components/DropDown/DropDown';
 
-const mockSetSortType = () => {};
-const mockOption = [
+const mockedSetSortType = jest.fn();
+const mockedOption = [
   {
     key: 'popularity.asc',
     text: 'Popularity Ascending',
@@ -12,7 +12,7 @@ const mockOption = [
 ];
 
 it('Should render the drop-down list when passed the option', async () => {
-  render(<DropDown setSortType={mockSetSortType} options={mockOption} />);
+  render(<DropDown setSortType={mockedSetSortType} options={mockedOption} />);
   const optionElement=screen.getByText(/Popularity Ascending/i);
   expect(optionElement).toBeVisible();
 
