@@ -10,25 +10,25 @@ const mockedProps = {
 
 describe('CardContent', () => {
   
-  it('should render prop title correctly', () => {
+  it('should render prop title correctly',async () => {
     render(<CardContent {...mockedProps} />);
     const headerElement = screen.getByRole('heading', { name: /Movie Title/i });
     expect(headerElement).toBeInTheDocument();
   });
 
-  it('should render prop releaseDate correctly', () => {
+  it('should render prop releaseDate correctly',async () => {
     render(<CardContent {...mockedProps} />);
     const spanElement = screen.getByText('20/2/2020');
     expect(spanElement).toBeInTheDocument();
   });
 
-  it('should render prop description correctly', () => {
+  it('should render prop description correctly',async () => {
     render(<CardContent {...mockedProps} />);
     const paragraphElement = screen.getByText('cool movie');
     expect(paragraphElement).toBeInTheDocument();
   });
 
-  it('should render no release date when the prop release date is empty', () => {
+  it('should render no release date when the prop release date is empty', async() => {
     render(<CardContent title="" releaseDate="" description="" />);
     const spanElement=screen.getByText('There is no release date');
     expect(spanElement).toBeInTheDocument();

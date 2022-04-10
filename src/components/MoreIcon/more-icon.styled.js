@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import viewPorts from "global-variables/viewPorts";
 
- const StyledMoreIcon = styled.i`
-  display: none;
+ const StyledMoreIcon = styled.button`
+  opacity: 0;
 
   @media (min-width: ${viewPorts.mobile}) {
-    display: initial;
+    opacity: 1;
     position: absolute;
     top: 0.7rem;
     right: 0.7rem;

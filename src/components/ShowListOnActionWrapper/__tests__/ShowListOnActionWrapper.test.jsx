@@ -1,8 +1,9 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ShowListOnActionWrapper from 'components/ShowListOnActionWrapper/ShowListOnActionWrapper';
 
-const MockShowListOnActionWrapper = ({ actionState }) => {
+function MockShowListOnActionWrapper ({ actionState }) {
   return (
     <ShowListOnActionWrapper actionState={actionState}>
       <li data-testid="list">Test1</li>

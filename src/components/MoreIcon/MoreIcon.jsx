@@ -7,21 +7,22 @@ import PropTypes from 'prop-types';
  *
  * @return {JSX.Element}
  */
-function MoreIcon({setShowMore}) {
+function MoreIcon({ setShowMore }) {
   return (
     <StyledMoreIcon
       onClick={() => setShowMore((prev) => !prev)}
       className="fas fa-ellipsis-h"
+      name="more"
     />
   );
 }
 
-MoreIcon.defaultProps={
-    setShowMore:()=>{},
-}
+MoreIcon.defaultProps = {
+  setShowMore: () => {},
+};
 
-MoreIcon.propTypes={
-    setShowMore:PropTypes.func,
-}
+MoreIcon.propTypes = {
+  setShowMore: PropTypes.func,
+};
 
 export default MoreIcon;

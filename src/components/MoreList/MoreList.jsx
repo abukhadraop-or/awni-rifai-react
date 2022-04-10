@@ -15,7 +15,7 @@ import {
  */
 function MoreList() {
   return (
-    <StyledMoreList>
+    <StyledMoreList role="tooltip">
       <UpperSection>
         <Title>Want to rate or add this item to a list?</Title>
         <Link>
