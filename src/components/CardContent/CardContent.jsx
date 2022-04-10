@@ -20,7 +20,7 @@ import {
 function CardContent({ title, releaseDate, description }) {
   return (
     <StyledCardContent>
-      <SecondaryHeader>{title}</SecondaryHeader>
+      <SecondaryHeader role="heading">{title}</SecondaryHeader>
       <ReleaseDate>
         {releaseDate !== '' ? releaseDate : 'There is no release date'}
       </ReleaseDate>
