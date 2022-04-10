@@ -15,7 +15,7 @@
       "plugin:jest/recommended"
     ],
     "parser": "@babel/eslint-parser",
-    "plugins": ["babel", "jest", "import", "prettier", "react-hooks"],
+    "plugins": ["babel", "jest", "import", "prettier", "react-hooks","testing-library"],
     "root": true,
     "settings": {
       "import/resolver": {
@@ -74,7 +74,13 @@
           "allowAfterThis": true
         }
       ],
-      "sort-keys": ["warn", "asc"]
+      "sort-keys": ["warn", "asc"],
+      "rules": {
+        "testing-library/await-async-query": "error",
+        "testing-library/no-await-sync-query": "error",
+        "testing-library/no-debugging-utils": "warn",
+        "testing-library/no-dom-import": "off"
+      }
     },
     "overrides": [
       {
@@ -82,6 +88,10 @@
         "rules": {
           "import/prefer-default-export": "off"
         }
+      },
+      {
+        "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+        "extends": ["plugin:testing-library/react"]
       }
     ]
   }
