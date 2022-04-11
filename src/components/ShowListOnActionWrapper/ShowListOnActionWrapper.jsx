@@ -7,9 +7,11 @@ import {
 
 /**
  * A component that shows it's children based on an bool passed to it.
+ * 
  * @param {Object} props
  * @param {JSX} props.children
  * @param {bool}props.actionState
+ * 
  * @return {JSX.Element}
  */
 function ShowListOnActionWrapper({ children, actionState }) {

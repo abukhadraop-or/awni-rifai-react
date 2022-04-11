@@ -28,7 +28,7 @@ function MovieCard({ data }) {
   const domeNode=useClickOutside(()=>setShowMore(false));
   
   return (
-    <MovieCardContainer ref={domeNode}>
+    <MovieCardContainer data-testid="movie card" ref={domeNode}>
       {showMore ? <Overlay onClick={() => setShowMore(false)} /> : ''}
       <ImageContainer>
         <CardImage

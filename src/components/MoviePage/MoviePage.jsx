@@ -32,19 +32,21 @@ function MoviePage() {
     /**
      * Set the movies to the array fetched from getAllMovies.
      */
+    
     const setMovies = async () => {
       const fetchedMovies = await getAllMovies(paginate, sortType);
-      setMoviesData(fetchedMovies);
+       setMoviesData(fetchedMovies);
     };
 
     setMovies();
+    
   }, [sortType]);
 
   return (
     <MoviePageWrapper>
       <MainHeader>Popular Movies</MainHeader>
       <Sort setSortType={setSortType} />
-      <CardsGridWrapper data={movies}>
+      <CardsGridWrapper>
         {movies?.map((movie) => (
           <MovieCard key={movie.id} data={movie} />
         ))}
