@@ -5,6 +5,7 @@ import Sort from 'components/Sort/Sort';
 import getAllMovies from 'services/movie-api';
 import MovieCard from 'components/MovieCard/MovieCard';
 import { MainHeader, MoreBtn } from 'components/MoviePage/movie-page.Styled';
+import get from 'utils/http';
 
 /**
  * Renders The whole Movie Page.
@@ -21,7 +22,7 @@ function MoviePage() {
      * Set the movies to the array fetched from getAllMovies.
      */
     const setMovies = async () => {
-      const fetchedMovies = await getAllMovies(paginate, sortType);
+      const fetchedMovies = await getAllMovies(get,paginate,sortType);
       setMoviesData((prev) => [...prev, ...fetchedMovies]);
     };
 
@@ -34,7 +35,7 @@ function MoviePage() {
      */
     
     const setMovies = async () => {
-      const fetchedMovies = await getAllMovies(paginate, sortType);
+      const fetchedMovies = await getAllMovies(get,paginate,sortType);
        setMoviesData(fetchedMovies);
     };
 
