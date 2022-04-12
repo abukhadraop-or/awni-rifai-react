@@ -69,6 +69,7 @@ function Sort({ setSortType }) {
         tabIndex={0}
         onKeyDown={() => setExpandList((prev) => !prev)}
         onClick={() => setExpandList((prev) => !prev)}
+        data-testid='sortHead'
       >
         <Title>Sort</Title>
         <ChevronIcon
