@@ -15,15 +15,19 @@ const API_KEY = apiKey;
  * @return {Promise<array>} Returns an array of movies.
  */
 const getAllMovies = async (
-  get,page= 1,sort='',includeAdult= 'false',includeVideo='false',language= 'en-US') => {
+  get,
+  page = 1,
+  sort = '',
+  includeAdult = 'false',
+  includeVideo = 'false',
+  language = 'en-US'
+) => {
   const data = await get(
     `${movieBaseUrl}?api_key=${API_KEY}${
       sort !== '' ? `&sort_by=${sort}` : ''
-    }&language=${language}&include_adult=${
-      includeAdult
-    }&include_video=${includeVideo}&page=${page}`
+    }&language=${language}&include_adult=${includeAdult}&include_video=${includeVideo}&page=${page}`
   );
-
+  console.log(data.results);
   return data.results;
 };
 

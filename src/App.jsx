@@ -1,14 +1,15 @@
 import React from 'react';
-import Navbar from 'components/Navbar/NavBar';
 import GlobalStyle from 'global-styles';
-import MoviePage from 'components/MoviePage/MoviePage';
+import Sidebar from 'components/Sidebar/Sidebar';
+import Table from 'components/Table/Table';
+
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
-      <MoviePage />
+     <Sidebar/>
+     <Table/>
     </>
   );
 }
