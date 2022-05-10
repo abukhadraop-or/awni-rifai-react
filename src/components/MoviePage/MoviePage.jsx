@@ -1,0 +1,51 @@
+import { React, useEffect, useState } from 'react';
+import MoviePageWrapper from 'components/MoviePageWrapper/MoviePageWrapper';
+import CardsGridWrapper from 'components/CardsWrapper/CardsGridWrapper';
+import Sort from 'components/Sort/Sort';
+import getAllMovies from 'services/movie-api';
+import MovieCard from 'components/MovieCard/MovieCard';
+import { MainHeader, MoreBtn } from 'components/MoviePage/movie-page.Styled';
+import get from 'utils/http';
+
+/**
+ * Renders The whole Movie Page.
+ *
+ * @return {JSX.Element}
+ */
+function MoviePage() {
+  const [movies, setMoviesData] = useState([]);
+  const [sortType, setSortType] = useState('');
+  const [paginate, setPaginate] = useState(1);
+
+  useEffect(() => {
+    /**
+     * Set the movies to the array fetched from getAllMovies.
+     */
+    const setMovies = async () => {
+      const fetchedMovies = await getAllMovies(get, paginate, sortType);
+
+      if (paginate === 1) setMoviesData(fetchedMovies);
+      else setMoviesData((prev) => [...prev, ...fetchedMovies]);
+    };
+
+    setMovies();
+  }, [paginate, sortType]);
+
+  return (
+    <MoviePageWrapper>
+      <MainHeader>Popular Movies</MainHeader>
+      <Sort setSortType={setSortType} />
+      <CardsGridWrapper>
+        {movies?.map((movie) => (
+          <MovieCard key={movie.id} data={movie} />
+        ))}
+      </CardsGridWrapper>
+      <div />
+      <MoreBtn onClick={() => setPaginate((prev) => prev + 1)}>
+        Load More
+      </MoreBtn>
+    </MoviePageWrapper>
+  );
+}
+
+export default MoviePage;
